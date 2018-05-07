@@ -1,0 +1,690 @@
+Environmental package	Structured comment name	Package item	Definition	Requirement	Expected value	Value syntax	Occurrence	Position	Preferred unit
+air	alt	altitude	the altitude of the sample is the vertical distance between Earth's surface above sea level and the sampled position in the air	M	measurement value	{float} m	1	0	meter
+air	elev	elevation	the elevation of the sampling site as measured by the vertical distance from mean sea level	C	measurement value	{float} {unit}	1	0	meter
+air	barometric_press	barometric pressure	force per unit area exerted against a surface by the weight of air above that surface	X	measurement value	{float} {unit}	1	1	millibar
+air	carb_dioxide	carbon dioxide	carbon dioxide (gas) amount or concentration at the time of sampling	X	measurement value	{float} {unit}	1	1	micromole per liter
+air	carb_monoxide	carbon monoxide	carbon monoxide (gas) amount or concentration at the time of sampling	X	measurement value	{float} {unit}	1	1	micromole per liter
+air	chem_administration	chemical administration	list of chemical compounds administered to the host or site where sampling occurred, and when (e.g. antibiotics, N fertilizer, air filter); can include multiple compounds. For Chemical Entities of Biological Interest ontology (CHEBI) (v 111), http://purl.bioontology.org/ontology/CHEBI	X	CHEBI;timestamp	{term}; {timestamp}	m	1	
+air	humidity	humidity	amount of water vapour in the air, at the time of sampling	X	measurement value	{float} {unit}	1	1	gram per cubic meter
+air	methane	methane	methane (gas) amount or concentration at the time of sampling	X	measurement value	{float} {unit}	1	1	micromole per liter
+air	misc_param	miscellaneous parameter	any other measurement performed or parameter collected, that is not listed here	X	parameter name;measurement value	{text};{float} {unit}	m	1	
+air	organism_count	organism count	total count of any organism per gram or volume of sample, should include name of organism followed by count; can include multiple organism counts	X	organism name;measurement value	{text};{float} {unit}	m	1	number of organism per cubic meter
+air	oxy_stat_samp	oxygenation status of sample	oxygenation status of sample	X	enumeration	[aerobic|anaerobic]	1	1	
+air	oxygen	oxygen	oxygen (gas) amount or concentration at the time of sampling	X	measurement value	{float} {unit}	1	1	milligram per liter, parts per million
+air	perturbation	perturbation	type of perturbation, e.g. chemical administration, physical disturbance, etc., coupled with time that perturbation occurred; can include multiple perturbation types	X	perturbation type name;time interval	{text};{interval}	m	1	
+air	pollutants	pollutants	pollutant types and, amount or concentrations measured at the time of sampling; can report multiple pollutants by entering numeric values preceded by name of pollutant	X	pollutant name;measurement value	{text};{float} {unit}	m	1	gram, mole per liter, milligram per liter
+air	resp_part_matter	respirable particulate matter	concentration of substances that remain suspended in the air, and comprise mixtures of organic and inorganic substances (PM10 and PM2.5); can report multiple PM's by entering numeric values preceded by name of PM	X	particulate matter name;measurement value	{text};{float} {unit}	m	1	microgram per cubic meter
+air	samp_salinity	sample salinity	salinity of sample, i.e. measure of total salt concentration	X	measurement value	{float} {unit}	1	1	practical salinity unit, percentage
+air	samp_store_dur	sample storage duration	duration for which sample was stored	X	time interval	{interval}	1	1	
+air	samp_store_loc	sample storage location	location at which sample was stored, usually name of a specific freezer/room	X	location name	{text}	1	1	
+air	samp_store_temp	sample storage temperature	temperature at which sample was stored, e.g. -80 degree Celsius	X	measurement value	{float} {unit}	1	1	degree Celsius
+air	samp_vol_we_dna_ext	sample volume or weight for DNA extraction	volume (mL) or weight (g) of sample processed for DNA extraction	X	measurement value	{float} {unit}	1	1	millliter, gram, milligram
+air	solar_irradiance	solar irradiance	the amount of solar energy that arrives at a specific area of a surface during a specific time interval	X	measurement value	{float} {unit}	1	1	watts per square meter, ergs per square centimeter per second
+air	temp	temperature	temperature of the sample at time of sampling	X	measurement value	{float} {unit}	1	1	degree Celsius
+air	ventilation_rate	ventilation rate	ventilation rate of the system in the sampled premises	X	measurement value	{float} {unit}	1	1	cubic meter per minute, liters per second
+air	ventilation_type	ventilation type	ventilation system used in the sampled premises	X	ventilation type name	{text}	1	1	
+air	volatile_org_comp	volatile organic compounds	concentration of carbon-based chemicals that easily evaporate at room temperature; can report multiple volatile organic compounds by entering numeric values preceded by name of compound	X	volatile organic compound name;measurement value	{text};{float} {unit}	m	1	microgram per cubic meter, parts per million
+air	wind_direction	wind direction	wind direction is the direction from which a wind originates	X	wind direction name	{text}	1	1	
+air	wind_speed	wind speed	speed of wind measured at the time of sampling	X	measurement value	{float} {unit}	1	1	meter per second, kilometer per hour
+built environment	surf_material	surface material	surface materials at the point of sampling	E	enumeration	[concrete|wood|stone|tile|plastic|glass|vinyl|metal|carpet|stainless steel|paint|cinder blocks|hay bales|stucco|adobe]	1	1	
+built environment	surf_air_cont	surface-air contaminant	contaminant identified on surface	E	enumeration	[dust|organic matter|particulate matter|volatile organic compounds|biological contaminants|radon|nutrients|biocides]	m	2	
+built environment	rel_air_humidity	relative air humidity	partial vapor and air pressure, density of the vapor and air, or by the actual mass of the vapor and air	M	measurement value	{float} {unit} [%]	1	3	percentage
+built environment	abs_air_humidity	absolute air humidity	actual mass of water vapor - mh20 - present in the air water vapor mixture	M	measurement value	{float} {unit} [kg|lb]	1	4	kilogram
+built environment	surf_humidity	surface humidity	surfaces: water activity as a function of air and material moisture	E	measurement value	{float} {unit} [%]	1	5	percentage
+built environment	air_temp	air temperature	temperature of the air at the time of sampling	M	measurement value	{float} {unit} [deg C]	1	6	degree Celsius
+built environment	surf_temp	surface temperature	temperature of the surface at the time of sampling	E	measurement value	{float} {unit} [deg C]	1	7	degree Celsius
+built environment	surf_moisture_ph	surface moisture pH 	pH measurement of surface	E	measurement value	{integer [0-14]}	1	8	
+built environment	build_occup_type	building occupancy type 	the primary function for which a building or discrete part of a building is intended to be used	M	enumeration	[airport|agricultural|commercial|educational|government|health care|high rise|industrial|low rise|market|military|office|parking|residential|restaurant|school|sports complex|storage|religious|transport|high rise|wood framed]	m	9	
+built environment	surf_moisture	surface moisture	water held on a surface	E	measurement value	{float} {unit}	1	10	parts per million, gram per cubic meter, gram per square meter
+built environment	dew_point	dew point 	the temperature to which a given parcel of humid air must be cooled, at constant barometric pressure, for water vapor to condense into water. 	X	measurement value	{float} {unit} [deg C]	1	11	gram, millimeter
+built environment	carb_dioxide	carbon dioxide	carbon dioxide (gas) amount or concentration at the time of sampling	M	measurement value	{float} {unit}	1	12	micromole per liter
+built environment	ventilation_type	ventilation type	ventilation system used in the sampled premises	M	ventilation type name	{text}	1	13	
+built environment	organism_count	organism count	total count of any organism per gram or volume of sample, should include name of organism followed by count; can include multiple organism counts	M	organism name;measurement value	{text};{float} {unit}	m	14	number of organism per cubic meter
+built environment	indoor_space	indoor space 	a distinguishable space within a structure, the purpose for which discrete areas of a building is used	M	enumeration	[bedroom|office|bathroom|foyer|kitchen|locker room|hallway|elevator]	1	15	
+built environment	indoor_surf	indoor surface	type of indoor surface	E	enumeration	[counter top|window|wall|cabinet|ceiling|door|shelving|vent cover]	1	16	
+built environment	filter_type	filter type	a device which removes solid particulates or airborne molecular contaminants	M	enumeration	[chemical air filter|electrostatic air treatment|gas-phase air treatment|HEPA filter|low-MERV pleated media|particulate air filter|ultraviolet air treatment]	m	17	
+built environment	heat_cool_type	heating and cooling system type	methods of conditioning or heating a room or building	M	enumeration	[radiant system|heat pump|forced air system|steam forced heat|wood stove]	m	18	
+built environment	substructure_type	substructure type 	the substructure or under building is that largely hidden section of the building which is built off the foundations to the ground floor level	X	enumeration	[crawlspace|slab on grade|basement]	m	19	
+built environment	building_setting	building setting	a location (geography) where a building is set	M	enumeration	[exurban|rural|suburbanlurban]	1	20	
+built environment	light_type	light type	application of light to achieve some practical or aesthetic effect. Lighting includes the use of both artificial light sources such as lamps and light fixtures, as well as natural illumination by capturing daylight. Can also include absence of light	M	enumeration	[natural light|electric light|no light]	m	21	
+built environment	samp_sort_meth	sample size sorting method	method by which samples are sorted	X	description of method	open face filter collecting total suspended particles, "prefilter to remove particles larger than X micrometers in diameter, where common values of X would be 10 and 2.5 full size sorting in a cascade impactor"	m	22	
+built environment	space_typ_state	space typical state 	customary or normal state of the space	M	enumeration	[typical occupied|typically unoccupied]	1	23	
+built environment	typ_occupant_dens	typical occupant density	customary or normal density of occupants	M	measurement value	{float}	1	24	
+built environment	occup_samp	occupancy at sampling	number of occupants present at time of sample within the given space	M	measurement value	{integer}	1	25	
+built environment	occupant_dens_samp	occupant density at sampling	average number of occupants at time of sampling per square footage	M	measurement value	{float}	1	26	
+host-associated	alt	altitude	the altitude of the sample is the vertical distance between Earth's surface above sea level and the sampled position in the air	C	measurement value	{float} m	1	0	meter
+host-associated	depth	depth	depth is defined as the vertical distance below local surface, e.g. for sediment or soil samples depth is measured from sediment or soil surface, respectivly. Depth can be reported as an interval for subsurface samples	C	measurement value	{float} m	1	0	
+host-associated	elev	elevation	the elevation of the sampling site as measured by the vertical distance from mean sea level	C	measurement value	{float} {unit}	1	0	meter
+host-associated	host_common_name	host common name	common name of the host, e.g. human	X	common name	{text}	1	1	
+host-associated	host_taxid	host taxid	NCBI taxon id of the host, e.g. 9606	X	NCBI taxon identifier	{integer}	1	2	
+host-associated	host_subject_id	host subject id	a unique identifier by which each subject can be referred to, de-identified, e.g. #131	X	unique identifier	{text}	1	3	
+host-associated	host_age	host age	age of host at the time of sampling; relevant scale depends on species and study, e.g. could be seconds for amoebae or centuries for trees	X	value	{float} {unit}	1	4	year, day, hour
+host-associated	host_life_stage	host life stage	description of life stage of host	X	stage	{text}	1	5	
+host-associated	host_sex	host sex	physical sex of the host	X	enumeration	[male|female|neuter|hermaphrodite|not determined]	1	6	
+host-associated	host_disease_stat	host disease status	list of diseases with which the host has been diagnosed; can include multiple diagnoses. the value of the field depends on host; for humans the terms should be chosen from DO (Disease Ontology) at http://www.disease-ontology.org, other hosts are free text	X	disease name or DO	{term}	m	7	
+host-associated	chem_administration	chemical administration	list of chemical compounds administered to the host or site where sampling occurred, and when (e.g. antibiotics, N fertilizer, air filter); can include multiple compounds. For Chemical Entities of Biological Interest ontology (CHEBI) (v 111), http://purl.bioontology.org/ontology/CHEBI	X	CHEBI;timestamp	{term}; {timestamp}	m	8	
+host-associated	host_body_habitat	host body habitat	original body habitat where the sample was obtained from	X	FMA	{term}	1	9	
+host-associated	host_body_site	host body site	name of body site where the sample was obtained from	X	FMA	{term}	1	10	
+host-associated	host_body_product	host body product	substance produced by the body, e.g. stool, mucus, where the sample was obtained from	X	FMA	{term}	1	11	
+host-associated	host_tot_mass	host total mass	total mass of the host at collection, the unit depends on host	X	measurement value	{float} {unit}	1	12	kilogram, gram
+host-associated	host_height	host height	the height of subject	X	measurement value	{float} {unit}	1	13	centimeter, millimeter, meter
+host-associated	host_length	host length	the length of subject	X	measurement value	{float} {unit}	1	13	centimeter, millimeter, meter
+host-associated	host_diet	host diet	type of diet depending on the host, for animals omnivore, herbivore etc., for humans high-fat, meditteranean etc.; can include multiple diet types	X	diet type	{text}	m	14	
+host-associated	host_last_meal	host last meal	content of last meal and time since feeding; can include multiple values	X	content;time interval	{text};{period}	m	15	
+host-associated	host_growth_cond	host growth conditions	literature reference giving growth conditions of the host	X	PMID,DOI,url or free text	{PMID|DOI|URL}	1	16	
+host-associated	host_substrate	host substrate	the growth substrate of the host 	X	substrate name	{text}	1	17	
+host-associated	host_family_relationship	host family relationship	relationships to other hosts in the same study; can include multiple relationships	X	relationship type;arbitrary identifier	{text};{text}	m	18	
+host-associated	host_infra_specific_name	host infra-specific name	taxonomic information about the host below subspecies level	X	name	{text}	1	19	
+host-associated	host_infra_specific_rank	host infra-specific rank	taxonomic rank information about the host below subspecies level, such as variety, form, rank etc.	X	rank	{text}	1	20	
+host-associated	host_genotype	host genotype	observed genotype	X	genotype	{text}	1	21	
+host-associated	host_phenotype	host phenotype	phenotype of host. For Phenotypic quality Ontology (PATO) (v 2013-10-28) terms, please see http://purl.bioontology.org/ontology/PATO	X	PATO	{term}	1	22	
+host-associated	host_body_temp	host body temperature	core body temperature of the host when sample was collected	X	measurement value	{float} {unit}	1	23	degree Celsius
+host-associated	host_dry_mass	host dry mass	measurement of dry mass	X	measurement value	{float} {unit}	1	24	kilogram, gram
+host-associated	host_blood_press_diast	host blood pressure diastolic	resting diastolic blood pressure, measured as mm mercury	X	measurement value	{float} {unit}	1	25	millimeter mercury
+host-associated	host_blood_press_syst	host blood pressure systolic	resting systolic blood pressure, measured as mm mercury	X	measurement value	{float} {unit}	1	26	millimeter mercury
+host-associated	host_color	host color	the color of host	X	color	{text}	1	27	
+host-associated	host_shape	host shape	morphological shape of host 	X	shape	{text}	1	28	
+host-associated	gravidity	gravidity	whether or not subject is gravid, and if yes date due or date post-conception, specifying which is used	X	gravidity status;timestamp	{boolean};{timestamp}	1	29	
+host-associated	perturbation	perturbation	type of perturbation, e.g. chemical administration, physical disturbance, etc., coupled with time that perturbation occurred; can include multiple perturbation types	X	perturbation type name;time interval	{text};{interval}	m	30	
+host-associated	samp_salinity	sample salinity	salinity of sample, i.e. measure of total salt concentration	X	measurement value	{float} {unit}	1	31	practical salinity unit, percentage
+host-associated	oxy_stat_samp	oxygenation status of sample	oxygenation status of sample	X	enumeration	[aerobic|anaerobic]	1	32	
+host-associated	temp	temperature	temperature of the sample at time of sampling	X	measurement value	{float} {unit}	1	33	degree Celsius
+host-associated	organism_count	organism count	total count of any organism per gram or volume of sample, should include name of organism followed by count; can include multiple organism counts	X	organism name;measurement value	{text};{float} {unit}	m	34	number of organism per cubic meter
+host-associated	samp_vol_we_dna_ext	sample volume or weight for DNA extraction	volume (mL) or weight (g) of sample processed for DNA extraction	X	measurement value	{float} {unit}	1	35	millliter, gram, milligram
+host-associated	samp_store_temp	sample storage temperature	temperature at which sample was stored, e.g. -80 degree Celsius	X	measurement value	{float} {unit}	1	36	degree Celsius
+host-associated	samp_store_dur	sample storage duration	duration for which sample was stored	X	time interval	{interval}	1	37	
+host-associated	samp_store_loc	sample storage location	location at which sample was stored, usually name of a specific freezer/room	X	location name	{text}	1	38	
+host-associated	misc_param	miscellaneous parameter	any other measurement performed or parameter collected, that is not listed here	X	parameter name;measurement value	{text};{float} {unit}	m	39	
+human-associated	host_subject_id	host subject id	a unique identifier by which each subject can be referred to, de-identified, e.g. #131	X	unique identifier	{text}	1	1	
+human-associated	host_age	host age	age of host at the time of sampling; relevant scale depends on species and study, e.g. could be seconds for amoebae or centuries for trees	X	value	{float} {unit}	1	2	year, day, hour
+human-associated	host_sex	host sex	physical sex of the host	X	enumeration	[male|female|neuter|hermaphrodite|not determined]	1	3	
+human-associated	host_disease_stat	host disease status	list of diseases with which the host has been diagnosed; can include multiple diagnoses. the value of the field depends on host; for humans the terms should be chosen from DO (Disease Ontology) at http://www.disease-ontology.org, other hosts are free text	X	disease name or DO	{term}	m	4	
+human-associated	ihmc_medication_code	IHMC medication code	can include multiple medication codes	X	IHMC code	{integer}	m	5	
+human-associated	chem_administration	chemical administration	list of chemical compounds administered to the host or site where sampling occurred, and when (e.g. antibiotics, N fertilizer, air filter); can include multiple compounds. For Chemical Entities of Biological Interest ontology (CHEBI) (v 111), http://purl.bioontology.org/ontology/CHEBI	X	CHEBI;timestamp	{term}; {timestamp}	m	6	
+human-associated	host_body_site	host body site	name of body site where the sample was obtained from, such as a specific organ or tissue (tongue, lung etc...). For Foundational Model of Anatomy Ontology (FMA) (v 3.1) terms, please see http://purl.bioontology.org/ontology/FMA	X	FMA	{term}	1	7	
+human-associated	host_body_product	host body product	substance produced by the body, e.g. stool, mucus, where the sample was obtained from. For Foundational Model of Anatomy Ontology (FMA) (v 3.1) terms, please see http://purl.bioontology.org/ontology/FMA	X	FMA	{term}	1	8	
+human-associated	host_tot_mass	host total mass	total mass of the host at collection, the unit depends on host	X	measurement value	{float} {unit}	1	9	kilogram, gram
+human-associated	host_height	host height	the height of subject	X	measurement value	{float} {unit}	1	10	centimeter, millimeter, meter
+human-associated	host_diet	host diet	type of diet depending on the host, for animals omnivore, herbivore etc., for humans high-fat, meditteranean etc.; can include multiple diet types	X	diet type	{text}	m	11	
+human-associated	host_last_meal	host last meal	content of last meal and time since feeding; can include multiple values	X	content;time interval	{text};{period}	m	12	
+human-associated	host_family_relationship	host family relationship	relationships to other hosts in the same study; can include multiple relationships	X	relationship type;arbitrary identifier	{text};{text}	m	13	
+human-associated	host_genotype	host genotype	observed genotype	X	genotype	{text}	1	14	
+human-associated	host_phenotype	host phenotype	phenotype of host. For Phenotypic quality Ontology (PATO) (v 2013-10-28) terms, please see http://purl.bioontology.org/ontology/PATO	X	PATO	{term}	1	15	
+human-associated	host_body_temp	host body temperature	core body temperature of the host when sample was collected	X	measurement value	{float} {unit}	1	16	degree Celsius
+human-associated	smoker	smoker	specification of smoking status	X	smoking status	{boolean}	1	17	
+human-associated	host_hiv_stat	host HIV status	HIV status of subject, if yes HAART initiation status should also be indicated as [YES or NO]	X	HIV status;HAART initiation status	{boolean};{boolean}	1	18	
+human-associated	drug_usage	drug usage	any drug used by subject and the frequency of usage; can include multiple drugs used	X	drug name;frequency	{text};{integer}/[year|month|week|day|hour]	m	19	
+human-associated	host_body_mass_index	host body-mass index	body mass index, calculated as weight/(height)squared	X	measurement value	{float} {unit}	1	20	kilogram per square meter
+human-associated	diet_last_six_month	major diet change in last six months	specification of major diet changes in the last six months, if yes the change should be specified	X	diet change;current diet	{boolean};{text}	1	21	
+human-associated	weight_loss_3_month	weight loss in last three months	specification of weight loss in the last three months, if yes should be further specified to include amount of weight loss	X	weight loss specification;measurement value	{boolean};{float} {unit}	1	22	kilogram, gram
+human-associated	ihmc_ethnicity	IHMC ethnicity	ethnicity of the subject	X	IHMC code or free text	{integer|text}	1	23	
+human-associated	host_occupation	host occupation	most frequent job performed by subject	X	IHMC code	{integer}	1	24	
+human-associated	pet_farm_animal	presence of pets or farm animals	specification of presence of pets or farm animals in the environment of subject, if yes the animals should be specified; can include multiple animals present	X	presence status;type of animal or pet	{boolean};{text}	m	25	
+human-associated	travel_out_six_month	travel outside the country in last six months	specification of the countries travelled in the last six months; can include multiple travels	X	country name	{text}	m	26	
+human-associated	twin_sibling	twin sibling presence	specification of twin sibling presence	X	presence status	{boolean}	1	27	
+human-associated	medic_hist_perform	medical history performed	whether full medical history was collected	X	true or false	{boolean}	1	28	
+human-associated	study_complt_stat	study completion status	specification of study completion status, if no the reason should be specified	X	YES or NO due to (1)adverse event (2) non-compliance (3) lost to follow up (4)other-specify	{boolean};[adverse event|non-compliance|lost to follow up|other-specify]	1	29	
+human-associated	pulmonary_disord	lung/pulmonary disorder	history of pulmonary disorders; can include multiple disorders	X	disorder name	{text}	m	30	
+human-associated	nose_throat_disord	lung/nose-throat disorder	history of nose-throat disorders; can include multiple disorders	X	disorder name	{text}	m	31	
+human-associated	blood_blood_disord	blood/blood disorder	history of blood disorders; can include multiple disorders	X	disorder name	{text}	m	32	
+human-associated	host_pulse	host pulse	resting pulse, measured as beats per minute	X	measurement value	{float} {unit}	1	35	beats per minute
+human-associated	gestation_state	amniotic fluid/gestation state	specification of the gestation state	X	gestation state	{text}	1	36	
+human-associated	maternal_health_stat	amniotic fluid/maternal health status	specification of the maternal health status	X	health status	{text}	1	37	
+human-associated	foetal_health_stat	amniotic fluid/foetal health status	specification of foetal health status, should also include abortion	X	health status	{text}	1	38	
+human-associated	amniotic_fluid_color	amniotic fluid/color	specification of the color of the amniotic fluid sample	X	color	{text}	1	39	
+human-associated	kidney_disord	urine/kidney disorder	history of kidney disorders; can include multiple disorders	X	disorder name	{text}	m	40	
+human-associated	urogenit_tract_disor	urine/urogenital tract disorder	history of urogenitaltract disorders; can include multiple disorders	X	disorder name	{text}	m	41	
+human-associated	urine_collect_meth	urine/collection method	specification of urine collection method	X	enumeration	[clean catch|catheter]	1	43	
+human-associated	perturbation	perturbation	type of perturbation, e.g. chemical administration, physical disturbance, etc., coupled with time that perturbation occurred; can include multiple perturbation types	X	perturbation type name;time interval	{text};{interval}	m	44	
+human-associated	samp_salinity	sample salinity	salinity of sample, i.e. measure of total salt concentration	X	measurement value	{float} {unit}	1	45	practical salinity unit, percentage
+human-associated	oxy_stat_samp	oxygenation status of sample	oxygenation status of sample	X	enumeration	[aerobic|anaerobic]	1	46	
+human-associated	temp	temperature	temperature of the sample at time of sampling	X	measurement value	{float} {unit}	1	47	degree Celsius
+human-associated	organism_count	organism count	total count of any organism per gram or volume of sample, should include name of organism followed by count; can include multiple organism counts	X	organism name;measurement value	{text};{float} {unit}	m	48	number of organism per cubic meter
+human-associated	samp_vol_we_dna_ext	sample volume or weight for DNA extraction	volume (mL) or weight (g) of sample processed for DNA extraction	X	measurement value	{float} {unit}	1	49	millliter, gram, milligram
+human-associated	samp_store_temp	sample storage temperature	temperature at which sample was stored, e.g. -80 degree Celsius	X	measurement value	{float} {unit}	1	50	degree Celsius
+human-associated	samp_store_dur	sample storage duration	duration for which sample was stored	X	time interval	{interval}	1	51	
+human-associated	samp_store_loc	sample storage location	location at which sample was stored, usually name of a specific freezer/room	X	location name	{text}	1	52	
+human-associated	misc_param	miscellaneous parameter	any other measurement performed or parameter collected, that is not listed here	X	parameter name;measurement value	{text};{float} {unit}	m	53	
+human-gut	gastrointest_disord	gastrointestinal tract disorder	history of gastrointestinal tract disorders; can include multiple disorders 	X	disorder name	{text}	m	1	
+human-gut	liver_disord	liver disorder	history of liver disorders; can include multiple disorders	X	disorder name	{text}	m	2	
+human-gut	special_diet	special diet	specification of special diet; can include multiple special diets	X	enumeration	[low carb|reduced calorie|vegetarian|other(to be specified)]	m	3	
+human-gut	host_subject_id	host subject id	a unique identifier by which each subject can be referred to, de-identified, e.g. #131	X	unique identifier	{text}	1	4	
+human-gut	host_age	host age	age of host at the time of sampling; relevant scale depends on species and study, e.g. could be seconds for amoebae or centuries for trees	X	value	{float} {unit}	1	5	year, day, hour
+human-gut	host_sex	host sex	physical sex of the host	X	enumeration	[male|female|neuter|hermaphrodite|not determined]	1	6	
+human-gut	host_disease_stat	host disease status	list of diseases with which the host has been diagnosed; can include multiple diagnoses. the value of the field depends on host; for humans the terms should be chosen from DO (Disease Ontology) at http://www.disease-ontology.org, other hosts are free text	X	disease name or DO	{term}	m	7	
+human-gut	ihmc_medication_code	IHMC medication code	can include multiple medication codes	X	IHMC code	{integer}	m	8	
+human-gut	chem_administration	chemical administration	list of chemical compounds administered to the host or site where sampling occurred, and when (e.g. antibiotics, N fertilizer, air filter); can include multiple compounds. For Chemical Entities of Biological Interest ontology (CHEBI) (v 111), http://purl.bioontology.org/ontology/CHEBI	X	CHEBI;timestamp	{term}; {timestamp}	m	9	
+human-gut	host_body_site	host body site	name of body site where the sample was obtained from, such as a specific organ or tissue (tongue, lung etc...). For Foundational Model of Anatomy Ontology (FMA) (v 3.1) terms, please see http://purl.bioontology.org/ontology/FMA	X	FMA	{term}	1	10	
+human-gut	host_body_product	host body product	substance produced by the body, e.g. stool, mucus, where the sample was obtained from. For Foundational Model of Anatomy Ontology (FMA) (v 3.1) terms, please see http://purl.bioontology.org/ontology/FMA	X	FMA	{term}	1	11	
+human-gut	host_tot_mass	host total mass	total mass of the host at collection, the unit depends on host	X	measurement value	{float} {unit}	1	12	kilogram, gram
+human-gut	host_height	host height	the height of subject	X	measurement value	{float} {unit}	1	13	centimeter, millimeter, meter
+human-gut	host_diet	host diet	type of diet depending on the host, for animals omnivore, herbivore etc., for humans high-fat, meditteranean etc.; can include multiple diet types	X	diet type	{text}	m	14	
+human-gut	host_last_meal	host last meal	content of last meal and time since feeding; can include multiple values	X	content;time interval	{text};{period}	m	15	
+human-gut	host_family_relationship	host family relationship	relationships to other hosts in the same study; can include multiple relationships	X	relationship type;arbitrary identifier	{text};{text}	m	16	
+human-gut	host_genotype	host genotype	observed genotype	X	genotype	{text}	1	17	
+human-gut	host_phenotype	host phenotype	phenotype of host. For Phenotypic quality Ontology (PATO) (v 2013-10-28) terms, please see http://purl.bioontology.org/ontology/PATO	X	PATO	{term}	1	18	
+human-gut	host_body_temp	host body temperature	core body temperature of the host when sample was collected	X	measurement value	{float} {unit}	1	19	degree Celsius
+human-gut	host_body_mass_index	host body-mass index	body mass index, calculated as weight/(height)squared	X	measurement value	{float} {unit}	1	20	kilogram per square meter
+human-gut	ihmc_ethnicity	IHMC ethnicity	ethnicity of the subject	X	IHMC code or free text	{integer|text}	1	21	
+human-gut	host_occupation	host occupation	most frequent job performed by subject	X	IHMC code	{integer}	1	22	
+human-gut	medic_hist_perform	medical history performed	whether full medical history was collected	X	true or false	{boolean}	1	23	
+human-gut	host_pulse	host pulse	resting pulse, measured as beats per minute	X	measurement value	{float} {unit}	1	26	beats per minute
+human-gut	perturbation	perturbation	type of perturbation, e.g. chemical administration, physical disturbance, etc., coupled with time that perturbation occurred; can include multiple perturbation types	X	perturbation type name;time interval	{text};{interval}	m	27	
+human-gut	samp_salinity	sample salinity	salinity of sample, i.e. measure of total salt concentration	X	measurement value	{float} {unit}	1	28	practical salinity unit, percentage
+human-gut	oxy_stat_samp	oxygenation status of sample	oxygenation status of sample	X	enumeration	[aerobic|anaerobic]	1	29	
+human-gut	temp	temperature	temperature of the sample at time of sampling	X	measurement value	{float} {unit}	1	30	degree Celsius
+human-gut	organism_count	organism count	total count of any organism per gram or volume of sample, should include name of organism followed by count; can include multiple organism counts	X	organism name;measurement value	{text};{float} {unit}	m	31	number of organism per cubic meter
+human-gut	samp_store_temp	sample storage temperature	temperature at which sample was stored, e.g. -80 degree Celsius	X	measurement value	{float} {unit}	1	32	degree Celsius
+human-gut	samp_vol_we_dna_ext	sample volume or weight for DNA extraction	volume (mL) or weight (g) of sample processed for DNA extraction	X	measurement value	{float} {unit}	1	32	millliter, gram, milligram
+human-gut	samp_store_dur	sample storage duration	duration for which sample was stored	X	time interval	{interval}	1	33	
+human-gut	samp_store_loc	sample storage location	location at which sample was stored, usually name of a specific freezer/room	X	location name	{text}	1	34	
+human-gut	misc_param	miscellaneous parameter	any other measurement performed or parameter collected, that is not listed here	X	parameter name;measurement value	{text};{float} {unit}	m	35	
+human-oral	nose_mouth_teeth_throat_disord	nose/mouth/teeth/throat disorder	history of nose/mouth/teeth/throat disorders; can include multiple disorders	X	disorder name	{text}	m	1	
+human-oral	time_last_toothbrush	time since last toothbrushing	specification of the time since last toothbrushing	X	timestamp	{timestamp}	1	2	
+human-oral	host_subject_id	host subject id	a unique identifier by which each subject can be referred to, de-identified, e.g. #131	X	unique identifier	{text}	1	3	
+human-oral	host_age	host age	age of host at the time of sampling; relevant scale depends on species and study, e.g. could be seconds for amoebae or centuries for trees	X	value	{float} {unit}	1	4	year, day, hour
+human-oral	host_sex	host sex	physical sex of the host	X	enumeration	[male|female|neuter|hermaphrodite|not determined]	1	5	
+human-oral	host_disease_stat	host disease status	list of diseases with which the host has been diagnosed; can include multiple diagnoses. the value of the field depends on host; for humans the terms should be chosen from DO (Disease Ontology) at http://www.disease-ontology.org, other hosts are free text	X	disease name or DO	{term}	m	6	
+human-oral	ihmc_medication_code	IHMC medication code	can include multiple medication codes	X	IHMC code	{integer}	m	7	
+human-oral	chem_administration	chemical administration	list of chemical compounds administered to the host or site where sampling occurred, and when (e.g. antibiotics, N fertilizer, air filter); can include multiple compounds. For Chemical Entities of Biological Interest ontology (CHEBI) (v 111), http://purl.bioontology.org/ontology/CHEBI	X	CHEBI;timestamp	{term}; {timestamp}	m	8	
+human-oral	host_body_site	host body site	name of body site where the sample was obtained from, such as a specific organ or tissue (tongue, lung etc...). For Foundational Model of Anatomy Ontology (FMA) (v 3.1) terms, please see http://purl.bioontology.org/ontology/FMA	X	FMA	{term}	1	9	
+human-oral	host_body_product	host body product	substance produced by the body, e.g. stool, mucus, where the sample was obtained from. For Foundational Model of Anatomy Ontology (FMA) (v 3.1) terms, please see http://purl.bioontology.org/ontology/FMA	X	FMA	{term}	1	10	
+human-oral	host_tot_mass	host total mass	total mass of the host at collection, the unit depends on host	X	measurement value	{float} {unit}	1	11	kilogram, gram
+human-oral	host_height	host height	the height of subject	X	measurement value	{float} {unit}	1	12	centimeter, millimeter, meter
+human-oral	host_diet	host diet	type of diet depending on the host, for animals omnivore, herbivore etc., for humans high-fat, meditteranean etc.; can include multiple diet types	X	diet type	{text}	m	13	
+human-oral	host_last_meal	host last meal	content of last meal and time since feeding; can include multiple values	X	content;time interval	{text};{period}	m	14	
+human-oral	host_family_relationship	host family relationship	relationships to other hosts in the same study; can include multiple relationships	X	relationship type;arbitrary identifier	{text};{text}	m	15	
+human-oral	host_genotype	host genotype	observed genotype	X	genotype	{text}	1	16	
+human-oral	host_phenotype	host phenotype	phenotype of host. For Phenotypic quality Ontology (PATO) (v 2013-10-28) terms, please see http://purl.bioontology.org/ontology/PATO	X	PATO	{term}	1	17	
+human-oral	host_body_temp	host body temperature	core body temperature of the host when sample was collected	X	measurement value	{float} {unit}	1	18	degree Celsius
+human-oral	host_body_mass_index	host body-mass index	body mass index, calculated as weight/(height)squared	X	measurement value	{float} {unit}	1	19	kilogram per square meter
+human-oral	ihmc_ethnicity	IHMC ethnicity	ethnicity of the subject	X	IHMC code or free text	{integer|text}	1	20	
+human-oral	host_occupation	host occupation	most frequent job performed by subject	X	IHMC code	{integer}	1	21	
+human-oral	medic_hist_perform	medical history performed	whether full medical history was collected	X	true or false	{boolean}	1	22	
+human-oral	host_pulse	host pulse	resting pulse, measured as beats per minute	X	measurement value	{float} {unit}	1	25	beats per minute
+human-oral	perturbation	perturbation	type of perturbation, e.g. chemical administration, physical disturbance, etc., coupled with time that perturbation occurred; can include multiple perturbation types	X	perturbation type name;time interval	{text};{interval}	m	26	
+human-oral	samp_salinity	sample salinity	salinity of sample, i.e. measure of total salt concentration	X	measurement value	{float} {unit}	1	27	practical salinity unit, percentage
+human-oral	oxy_stat_samp	oxygenation status of sample	oxygenation status of sample	X	enumeration	[aerobic|anaerobic]	1	28	
+human-oral	temp	temperature	temperature of the sample at time of sampling	X	measurement value	{float} {unit}	1	29	degree Celsius
+human-oral	organism_count	organism count	total count of any organism per gram or volume of sample, should include name of organism followed by count; can include multiple organism counts	X	organism name;measurement value	{text};{float} {unit}	m	30	number of organism per cubic meter
+human-oral	samp_vol_we_dna_ext	sample volume or weight for DNA extraction	volume (mL) or weight (g) of sample processed for DNA extraction	X	measurement value	{float} {unit}	1	31	millliter, gram, milligram
+human-oral	samp_store_temp	sample storage temperature	temperature at which sample was stored, e.g. -80 degree Celsius	X	measurement value	{float} {unit}	1	32	degree Celsius
+human-oral	samp_store_dur	sample storage duration	duration for which sample was stored	X	time interval	{interval}	1	33	
+human-oral	samp_store_loc	sample storage location	location at which sample was stored, usually name of a specific freezer/room	X	location name	{text}	1	34	
+human-oral	misc_param	miscellaneous parameter	any other measurement performed or parameter collected, that is not listed here	X	parameter name;measurement value	{text};{float} {unit}	m	35	
+human-skin	dermatology_disord	dermatology disorder	history of dermatology disorders; can include multiple disorders	X	disorder name	{text}	m	1	
+human-skin	time_since_last_wash	time since last wash	specification of the time since last wash	X	timestamp	{timestamp}	1	2	
+human-skin	dominant_hand	dominant hand	dominant hand of the subject	X	enumeration	[left|right|ambidextrous]	1	3	
+human-skin	host_subject_id	host subject id	a unique identifier by which each subject can be referred to, de-identified, e.g. #131	X	unique identifier	{text}	1	4	
+human-skin	host_age	host age	age of host at the time of sampling; relevant scale depends on species and study, e.g. could be seconds for amoebae or centuries for trees	X	value	{float} {unit}	1	5	year, day, hour
+human-skin	host_sex	host sex	physical sex of the host	X	enumeration	[male|female|neuter|hermaphrodite|not determined]	1	6	
+human-skin	host_disease_stat	host disease status	list of diseases with which the host has been diagnosed; can include multiple diagnoses. the value of the field depends on host; for humans the terms should be chosen from DO (Disease Ontology) at http://www.disease-ontology.org, other hosts are free text	X	disease name or DO	{term}	m	7	
+human-skin	ihmc_medication_code	IHMC medication code	can include multiple medication codes	X	IHMC code	{integer}	m	8	
+human-skin	chem_administration	chemical administration	list of chemical compounds administered to the host or site where sampling occurred, and when (e.g. antibiotics, N fertilizer, air filter); can include multiple compounds. For Chemical Entities of Biological Interest ontology (CHEBI) (v 111), http://purl.bioontology.org/ontology/CHEBI	X	CHEBI;timestamp	{term}; {timestamp}	m	9	
+human-skin	host_body_site	host body site	name of body site where the sample was obtained from, such as a specific organ or tissue (tongue, lung etc...). For Foundational Model of Anatomy Ontology (FMA) (v 3.1) terms, please see http://purl.bioontology.org/ontology/FMA	X	FMA	{term}	1	10	
+human-skin	host_body_product	host body product	substance produced by the body, e.g. stool, mucus, where the sample was obtained from. For Foundational Model of Anatomy Ontology (FMA) (v 3.1) terms, please see http://purl.bioontology.org/ontology/FMA	X	FMA	{term}	1	11	
+human-skin	host_tot_mass	host total mass	total mass of the host at collection, the unit depends on host	X	measurement value	{float} {unit}	1	12	kilogram, gram
+human-skin	host_height	host height	the height of subject	X	measurement value	{float} {unit}	1	13	centimeter, millimeter, meter
+human-skin	host_diet	host diet	type of diet depending on the host, for animals omnivore, herbivore etc., for humans high-fat, meditteranean etc.; can include multiple diet types	X	diet type	{text}	m	14	
+human-skin	host_last_meal	host last meal	content of last meal and time since feeding; can include multiple values	X	content;time interval	{text};{period}	m	15	
+human-skin	host_family_relationship	host family relationship	relationships to other hosts in the same study; can include multiple relationships	X	relationship type;arbitrary identifier	{text};{text}	m	16	
+human-skin	host_genotype	host genotype	observed genotype	X	genotype	{text}	1	17	
+human-skin	host_phenotype	host phenotype	phenotype of host. For Phenotypic quality Ontology (PATO) (v 2013-10-28) terms, please see http://purl.bioontology.org/ontology/PATO	X	PATO	{term}	1	18	
+human-skin	host_body_temp	host body temperature	core body temperature of the host when sample was collected	X	measurement value	{float} {unit}	1	19	degree Celsius
+human-skin	host_body_mass_index	host body-mass index	body mass index, calculated as weight/(height)squared	X	measurement value	{float} {unit}	1	20	kilogram per square meter
+human-skin	ihmc_ethnicity	IHMC ethnicity	ethnicity of the subject	X	IHMC code or free text	{integer|text}	1	21	
+human-skin	host_occupation	host occupation	most frequent job performed by subject	X	IHMC code	{integer}	1	22	
+human-skin	medic_hist_perform	medical history performed	whether full medical history was collected	X	true or false	{boolean}	1	23	
+human-skin	host_pulse	host pulse	resting pulse, measured as beats per minute	X	measurement value	{float} {unit}	1	26	beats per minute
+human-skin	perturbation	perturbation	type of perturbation, e.g. chemical administration, physical disturbance, etc., coupled with time that perturbation occurred; can include multiple perturbation types	X	perturbation type name;time interval	{text};{interval}	m	27	
+human-skin	samp_salinity	sample salinity	salinity of sample, i.e. measure of total salt concentration	X	measurement value	{float} {unit}	1	28	practical salinity unit, percentage
+human-skin	oxy_stat_samp	oxygenation status of sample	oxygenation status of sample	X	enumeration	[aerobic|anaerobic]	1	29	
+human-skin	temp	temperature	temperature of the sample at time of sampling	X	measurement value	{float} {unit}	1	30	degree Celsius
+human-skin	organism_count	organism count	total count of any organism per gram or volume of sample, should include name of organism followed by count; can include multiple organism counts	X	organism name;measurement value	{text};{float} {unit}	m	31	number of organism per cubic meter
+human-skin	samp_vol_we_dna_ext	sample volume or weight for DNA extraction	volume (mL) or weight (g) of sample processed for DNA extraction	X	measurement value	{float} {unit}	1	32	millliter, gram, milligram
+human-skin	samp_store_temp	sample storage temperature	temperature at which sample was stored, e.g. -80 degree Celsius	X	measurement value	{float} {unit}	1	33	degree Celsius
+human-skin	samp_store_dur	sample storage duration	duration for which sample was stored	X	time interval	{interval}	1	34	
+human-skin	samp_store_loc	sample storage location	location at which sample was stored, usually name of a specific freezer/room	X	location name	{text}	1	35	
+human-skin	misc_param	miscellaneous parameter	any other measurement performed or parameter collected, that is not listed here	X	parameter name;measurement value	{text};{float} {unit}	m	36	
+human-vaginal	menarche	menarche	date of most recent menstruation	X	timestamp	{timestamp}	1	1	
+human-vaginal	sexual_act	sexual activity	current sexual partner and frequency of sex	X	partner sex;frequency	{text}	1	2	
+human-vaginal	pregnancy	pregnancy	date due of pregnancy	X	timestamp	{timestamp}	1	3	
+human-vaginal	douche	douche	date of most recent douche	X	timestamp	{timestamp}	1	4	
+human-vaginal	birth_control	birth control	specification of birth control medication used	X	medication name	{text}	1	5	
+human-vaginal	menopause	menopause	date of onset of menopause	X	timestamp	{timestamp}	1	6	
+human-vaginal	hrt	HRT	whether subject had hormone replacement theraphy, and if yes start date	X	timestamp	{timestamp}	1	7	
+human-vaginal	hysterectomy	hysterectomy	specification of whether hysterectomy was performed	X	hysterectomy status	{boolean}	1	8	
+human-vaginal	gynecologic_disord	gynecological disorder	history of gynecological disorders; can include multiple disorders	X	gynecological disorder	{text}	m	9	
+human-vaginal	urogenit_disord	urogenital disorder	history of urogenital disorders, can include multiple disorders	X	disorder name	{text}	m	10	
+human-vaginal	host_subject_id	host subject id	a unique identifier by which each subject can be referred to, de-identified, e.g. #131	X	unique identifier	{text}	1	11	
+human-vaginal	host_age	host age	age of host at the time of sampling; relevant scale depends on species and study, e.g. could be seconds for amoebae or centuries for trees	X	value	{float} {unit}	1	12	year, day, hour
+human-vaginal	host_sex	host sex	physical sex of the host	X	enumeration	[male|female|neuter|hermaphrodite|not determined]	1	13	
+human-vaginal	host_disease_stat	host disease status	list of diseases with which the host has been diagnosed; can include multiple diagnoses. the value of the field depends on host; for humans the terms should be chosen from DO (Disease Ontology) at http://www.disease-ontology.org, other hosts are free text	X	disease name or DO	{term}	m	14	
+human-vaginal	ihmc_medication_code	IHMC medication code	can include multiple medication codes	X	IHMC code	{integer}	m	15	
+human-vaginal	chem_administration	chemical administration	list of chemical compounds administered to the host or site where sampling occurred, and when (e.g. antibiotics, N fertilizer, air filter); can include multiple compounds. For Chemical Entities of Biological Interest ontology (CHEBI) (v 111), http://purl.bioontology.org/ontology/CHEBI	X	CHEBI;timestamp	{term}; {timestamp}	m	16	
+human-vaginal	host_body_site	host body site	name of body site where the sample was obtained from, such as a specific organ or tissue (tongue, lung etc...). For Foundational Model of Anatomy Ontology (FMA) (v 3.1) terms, please see http://purl.bioontology.org/ontology/FMA	X	FMA	{term}	1	17	
+human-vaginal	host_body_product	host body product	substance produced by the body, e.g. stool, mucus, where the sample was obtained from. For Foundational Model of Anatomy Ontology (FMA) (v 3.1) terms, please see http://purl.bioontology.org/ontology/FMA	X	FMA	{term}	1	18	
+human-vaginal	host_tot_mass	host total mass	total mass of the host at collection, the unit depends on host	X	measurement value	{float} {unit}	1	19	kilogram, gram
+human-vaginal	host_height	host height	the height of subject	X	measurement value	{float} {unit}	1	20	centimeter, millimeter, meter
+human-vaginal	host_diet	host diet	type of diet depending on the host, for animals omnivore, herbivore etc., for humans high-fat, meditteranean etc.; can include multiple diet types	X	diet type	{text}	m	21	
+human-vaginal	host_last_meal	host last meal	content of last meal and time since feeding; can include multiple values	X	content;time interval	{text};{period}	m	22	
+human-vaginal	host_family_relationship	host family relationship	relationships to other hosts in the same study; can include multiple relationships	X	relationship type;arbitrary identifier	{text};{text}	m	23	
+human-vaginal	host_genotype	host genotype	observed genotype	X	genotype	{text}	1	24	
+human-vaginal	host_phenotype	host phenotype	phenotype of host. For Phenotypic quality Ontology (PATO) (v 2013-10-28) terms, please see http://purl.bioontology.org/ontology/PATO	X	PATO	{term}	1	25	
+human-vaginal	host_body_temp	host body temperature	core body temperature of the host when sample was collected	X	measurement value	{float} {unit}	1	26	degree Celsius
+human-vaginal	host_body_mass_index	host body-mass index	body mass index, calculated as weight/(height)squared	X	measurement value	{float} {unit}	1	27	kilogram per square meter
+human-vaginal	ihmc_ethnicity	IHMC ethnicity	ethnicity of the subject	X	IHMC code or free text	{integer|text}	1	28	
+human-vaginal	host_occupation	host occupation	most frequent job performed by subject	X	IHMC code	{integer}	1	29	
+human-vaginal	medic_hist_perform	medical history performed	whether full medical history was collected	X	true or false	{boolean}	1	30	
+human-vaginal	host_pulse	host pulse	resting pulse, measured as beats per minute	X	measurement value	{float} {unit}	1	33	beats per minute
+human-vaginal	perturbation	perturbation	type of perturbation, e.g. chemical administration, physical disturbance, etc., coupled with time that perturbation occurred; can include multiple perturbation types	X	perturbation type name;time interval	{text};{interval}	m	34	
+human-vaginal	samp_salinity	sample salinity	salinity of sample, i.e. measure of total salt concentration	X	measurement value	{float} {unit}	1	35	practical salinity unit, percentage
+human-vaginal	oxy_stat_samp	oxygenation status of sample	oxygenation status of sample	X	enumeration	[aerobic|anaerobic]	1	36	
+human-vaginal	temp	temperature	temperature of the sample at time of sampling	X	measurement value	{float} {unit}	1	37	degree Celsius
+human-vaginal	organism_count	organism count	total count of any organism per gram or volume of sample, should include name of organism followed by count; can include multiple organism counts	X	organism name;measurement value	{text};{float} {unit}	m	38	number of organism per cubic meter
+human-vaginal	samp_vol_we_dna_ext	sample volume or weight for DNA extraction	volume (mL) or weight (g) of sample processed for DNA extraction	X	measurement value	{float} {unit}	1	39	millliter, gram, milligram
+human-vaginal	samp_store_temp	sample storage temperature	temperature at which sample was stored, e.g. -80 degree Celsius	X	measurement value	{float} {unit}	1	40	degree Celsius
+human-vaginal	samp_store_loc	sample storage location	location at which sample was stored, usually name of a specific freezer/room	X	location name	{text}	1	41	
+human-vaginal	samp_store_dur	sample storage duration	duration for which sample was stored	X	time interval	{interval}	1	42	
+human-vaginal	misc_param	miscellaneous parameter	any other measurement performed or parameter collected, that is not listed here	X	parameter name;measurement value	{text};{float} {unit}	m	43	
+microbial mat/biofilm	alt	altitude	the altitude of the sample is the vertical distance between Earth's surface above sea level and the sampled position in the air	C	measurement value	{float} m	1	0	meter
+microbial mat/biofilm	depth	depth	depth is defined as the vertical distance below local surface, e.g. for sediment or soil samples depth is measured from sediment or soil surface, respectivly. Depth can be reported as an interval for subsurface samples	M	measurement value	{float} m	1	0	
+microbial mat/biofilm	elev	elevation	the elevation of the sampling site as measured by the vertical distance from mean sea level	M	measurement value	{float} {unit}	1	0	meter
+microbial mat/biofilm	alkalinity	alkalinity	alkalinity, the ability of a solution to neutralize acids to the equivalence point of carbonate or bicarbonate	X	measurement value	{float} {unit}	1	1	milliequivalent per liter
+microbial mat/biofilm	alkyl_diethers	alkyl diethers	concentration of alkyl diethers 	X	measurement value	{float} {unit}	1	1	mole per liter
+microbial mat/biofilm	aminopept_act	aminopeptidase activity	measurement of aminopeptidase activity	X	measurement value	{float} {unit}	1	1	mole per liter per hour
+microbial mat/biofilm	ammonium	ammonium	concentration of ammonium	X	measurement value	{float} {unit}	1	1	micromole per liter
+microbial mat/biofilm	bacteria_carb_prod	bacterial carbon production	measurement of bacterial carbon production	X	measurement value	{float} {unit}	1	1	nanogram per hour
+microbial mat/biofilm	biomass	biomass	amount of biomass; should include the name for the part of biomass measured, e.g. microbial, total. can include multiple measurements	X	biomass type;measurement value	{text};{float} {unit}	m	1	ton, kilogram, gram
+microbial mat/biofilm	bishomohopanol	bishomohopanol	concentration of bishomohopanol 	X	measurement value	{float} {unit}	1	1	microgram per liter, microgram per gram
+microbial mat/biofilm	bromide	bromide	concentration of bromide 	X	measurement value	{float} {unit}	1	1	parts per million
+microbial mat/biofilm	calcium	calcium	concentration of calcium	X	measurement value	{float} {unit}	1	1	milligram per liter, micromole per liter, parts per million
+microbial mat/biofilm	carb_nitro_ratio	carbon/nitrogen ratio	ratio of amount or concentrations of carbon to nitrogen	X	measurement value	{float} {unit}	1	1	
+microbial mat/biofilm	chem_administration	chemical administration	list of chemical compounds administered to the host or site where sampling occurred, and when (e.g. antibiotics, N fertilizer, air filter); can include multiple compounds. For Chemical Entities of Biological Interest ontology (CHEBI) (v 111), http://purl.bioontology.org/ontology/CHEBI	X	CHEBI;timestamp	{term}; {timestamp}	m	1	
+microbial mat/biofilm	chloride	chloride	concentration of chloride 	X	measurement value	{float} {unit}	1	1	milligram per liter
+microbial mat/biofilm	chlorophyll	chlorophyll	concentration of chlorophyll	X	measurement value	{float} {unit}	1	1	milligram per cubic meter, microgram per liter
+microbial mat/biofilm	diether_lipids	diether lipids	concentration of diether lipids; can include multiple types of diether lipids	X	diether lipid name;measurement value	{text};{float} {unit}	m	1	nanogram per liter
+microbial mat/biofilm	diss_carb_dioxide	dissolved carbon dioxide	concentration of dissolved carbon dioxide	X	measurement value	{float} {unit}	1	1	micromole per liter
+microbial mat/biofilm	diss_hydrogen	dissolved hydrogen	concentration of dissolved hydrogen	X	measurement value	{float} {unit}	1	1	micromole per liter
+microbial mat/biofilm	diss_inorg_carb	dissolved inorganic carbon	dissolved inorganic carbon concentration	X	measurement value	{float} {unit}	1	1	microgram per liter
+microbial mat/biofilm	diss_org_carb	dissolved organic carbon	concentration of dissolved organic carbon	X	measurement value	{float} {unit}	1	1	micromole per liter
+microbial mat/biofilm	diss_org_nitro	dissolved organic nitrogen	dissolved organic nitrogen concentration measured as; total dissolved nitrogen - NH4 - NO3 - NO2	X	measurement value	{float} {unit}	1	1	microgram per liter, milligram per liter
+microbial mat/biofilm	diss_oxygen	dissolved oxygen	concentration of dissolved oxygen	X	measurement value	{float} {unit}	1	1	micromole per kilogram
+microbial mat/biofilm	glucosidase_act	glucosidase activity	measurement of glucosidase activity	X	measurement value	{float} {unit}	1	1	mol per liter per hour
+microbial mat/biofilm	magnesium	magnesium	concentration of magnesium	X	measurement value	{float} {unit}	1	1	mole per liter, milligram per liter, parts per million
+microbial mat/biofilm	mean_frict_vel	mean friction velocity	measurement of mean friction velocity	X	measurement value	{float} {unit}	1	1	meter per second
+microbial mat/biofilm	mean_peak_frict_vel	mean peak friction velocity	measurement of mean peak friction velocity	X	measurement value	{float} {unit}	1	1	meter per second
+microbial mat/biofilm	methane	methane	methane (gas) amount or concentration at the time of sampling	X	measurement value	{float} {unit}	1	1	micromole per liter
+microbial mat/biofilm	misc_param	miscellaneous parameter	any other measurement performed or parameter collected, that is not listed here	X	parameter name;measurement value	{text};{float} {unit}	m	1	
+microbial mat/biofilm	n_alkanes	n-alkanes	concentration of n-alkanes; can include multiple n-alkanes	X	n-alkane name;measurement value	{text};{float} {unit}	m	1	micromole per liter
+microbial mat/biofilm	nitrate	nitrate	concentration of nitrate	X	measurement value	{float} {unit}	1	1	micromole per liter
+microbial mat/biofilm	nitrite	nitrite	concentration of nitrite	X	measurement value	{float} {unit}	1	1	micromole per liter
+microbial mat/biofilm	nitro	nitrogen	concentration of nitrogen (total)	X	measurement value	{float} {unit}	1	1	micromole per liter
+microbial mat/biofilm	org_carb	organic carbon	concentration of organic carbon	X	measurement value	{float} {unit}	1	1	micromole per liter
+microbial mat/biofilm	org_matter	organic matter	concentration of organic matter 	X	measurement value	{float} {unit}	1	1	microgram per liter
+microbial mat/biofilm	org_nitro	organic nitrogen	concentration of organic nitrogen	X	measurement value	{float} {unit}	1	1	microgram per liter
+microbial mat/biofilm	organism_count	organism count	total count of any organism per gram or volume of sample, should include name of organism followed by count; can include multiple organism counts	X	organism name;measurement value	{text};{float} {unit}	m	1	number of organism per cubic meter
+microbial mat/biofilm	oxy_stat_samp	oxygenation status of sample	oxygenation status of sample	X	enumeration	[aerobic|anaerobic]	1	1	
+microbial mat/biofilm	part_org_carb	particulate organic carbon	concentration of particulate organic carbon	X	measurement value	{float} {unit}	1	1	microgram per liter
+microbial mat/biofilm	perturbation	perturbation	type of perturbation, e.g. chemical administration, physical disturbance, etc., coupled with time that perturbation occurred; can include multiple perturbation types	X	perturbation type name;time interval	{text};{interval}	m	1	
+microbial mat/biofilm	petroleum_hydrocarb	petroleum hydrocarbon	concentration of petroleum hydrocarbon	X	measurement value	{float} {unit}	1	1	micromole per liter
+microbial mat/biofilm	ph	pH	pH measurement	X	measurement value	{float}	1	1	
+microbial mat/biofilm	phaeopigments	phaeopigments	concentration of phaeopigments; can include multiple phaeopigments	X	phaeopigment name;measurement value	{text};{float} {unit}	m	1	milligram per cubic meter
+microbial mat/biofilm	phosphate	phosphate	concentration of phosphate	X	measurement value	{float} {unit}	1	1	micromole per liter
+microbial mat/biofilm	phosplipid_fatt_acid	phospholipid fatty acid	concentration of phospholipid fatty acids; can include multiple values	X	phospholipid fatty acid name;measurement value	{text};{float} {unit}	m	1	mole per gram, mole per liter
+microbial mat/biofilm	potassium	potassium	concentration of potassium 	X	measurement value	{float} {unit}	1	1	parts per million
+microbial mat/biofilm	pressure	pressure	pressure to which the sample is subject, in atmospheres	X	measurement value	{float} {unit}	1	1	atmosphere
+microbial mat/biofilm	redox_potential	redox potential	redox potential, measured relative to a hydrogen cell, indicating oxidation or reduction potential	X	measurement value	{float} {unit}	1	1	millivolt
+microbial mat/biofilm	salinity	salinity	salinity measurement	X	measurement value	{float} {unit}	1	1	practical salinity unit, percentage
+microbial mat/biofilm	samp_store_dur	sample storage duration	duration for which sample was stored	X	time interval	{interval}	1	1	
+microbial mat/biofilm	samp_store_loc	sample storage location	location at which sample was stored, usually name of a specific freezer/room	X	location name	{text}	1	1	
+microbial mat/biofilm	samp_store_temp	sample storage temperature	temperature at which sample was stored, e.g. -80 degree Celsius	X	measurement value	{float} {unit}	1	1	degree Celsius
+microbial mat/biofilm	samp_vol_we_dna_ext	sample volume or weight for DNA extraction	volume (mL) or weight (g) of sample processed for DNA extraction	X	measurement value	{float} {unit}	1	1	millliter, gram, milligram
+microbial mat/biofilm	silicate	silicate	concentration of silicate	X	measurement value	{float} {unit}	1	1	micromole per liter
+microbial mat/biofilm	sodium	sodium	sodium concentration	X	measurement value	{float} {unit}	1	1	parts per million
+microbial mat/biofilm	sulfate	sulfate	concentration of sulfate	X	measurement value	{float} {unit}	1	1	micromole per liter, milligram per liter
+microbial mat/biofilm	sulfide	sulfide	concentration of sulfide	X	measurement value	{float} {unit}	1	1	micromole per liter, milligram per liter
+microbial mat/biofilm	temp	temperature	temperature of the sample at time of sampling	X	measurement value	{float} {unit}	1	1	degree Celsius
+microbial mat/biofilm	tot_carb	total carbon	total carbon content	X	measurement value	{float} {unit}	1	1	microgram per liter
+microbial mat/biofilm	tot_nitro	total nitrogen	total nitrogen content of the sample	X	measurement value	{float} {unit}	1	1	microgram per liter, micromole per liter
+microbial mat/biofilm	tot_org_carb	total organic carbon	Definition for soil: total organic carbon content of the soil, definition otherwise: total organic carbon content	X	measurement value	{float} {unit}	1	1	gram Carbon per kilogram sample material
+microbial mat/biofilm	turbidity	turbidity	turbidity measurement	X	measurement value	{float} {unit}	1	1	formazin turbidity unit, formazin nephelometric units
+microbial mat/biofilm	water_content	water content	water content measurement	X	measurement value	{float} {unit}	1	1	gram per gram or cubic centimeter per cubic centimeter
+miscellaneous natural or artificial environment	alt	altitude	the altitude of the sample is the vertical distance between Earth's surface above sea level and the sampled position in the air	C	measurement value	{float} m	1	0	meter
+miscellaneous natural or artificial environment	depth	depth	depth is defined as the vertical distance below local surface, e.g. for sediment or soil samples depth is measured from sediment or soil surface, respectivly. Depth can be reported as an interval for subsurface samples	C	measurement value	{float} m	1	0	
+miscellaneous natural or artificial environment	elev	elevation	the elevation of the sampling site as measured by the vertical distance from mean sea level	C	measurement value	{float} {unit}	1	0	meter
+miscellaneous natural or artificial environment	alkalinity	alkalinity	alkalinity, the ability of a solution to neutralize acids to the equivalence point of carbonate or bicarbonate	X	measurement value	{float} {unit}	1	1	milliequivalent per liter
+miscellaneous natural or artificial environment	ammonium	ammonium	concentration of ammonium	X	measurement value	{float} {unit}	1	1	micromole per liter
+miscellaneous natural or artificial environment	biomass	biomass	amount of biomass; should include the name for the part of biomass measured, e.g. microbial, total. can include multiple measurements	X	biomass type;measurement value	{text};{float} {unit}	m	1	ton, kilogram, gram
+miscellaneous natural or artificial environment	bromide	bromide	concentration of bromide 	X	measurement value	{float} {unit}	1	1	parts per million
+miscellaneous natural or artificial environment	calcium	calcium	concentration of calcium	X	measurement value	{float} {unit}	1	1	milligram per liter, micromole per liter, parts per million
+miscellaneous natural or artificial environment	chem_administration	chemical administration	list of chemical compounds administered to the host or site where sampling occurred, and when (e.g. antibiotics, N fertilizer, air filter); can include multiple compounds. For Chemical Entities of Biological Interest ontology (CHEBI) (v 111), http://purl.bioontology.org/ontology/CHEBI	X	CHEBI;timestamp	{term}; {timestamp}	m	1	
+miscellaneous natural or artificial environment	chloride	chloride	concentration of chloride 	X	measurement value	{float} {unit}	1	1	milligram per liter
+miscellaneous natural or artificial environment	chlorophyll	chlorophyll	concentration of chlorophyll	X	measurement value	{float} {unit}	1	1	milligram per cubic meter, microgram per liter
+miscellaneous natural or artificial environment	density	density	density of sample	X	measurement value	{float} {unit}	1	1	gram per cubic meter
+miscellaneous natural or artificial environment	diether_lipids	diether lipids	concentration of diether lipids; can include multiple types of diether lipids	X	diether lipid name;measurement value	{text};{float} {unit}	m	1	nanogram per liter
+miscellaneous natural or artificial environment	diss_carb_dioxide	dissolved carbon dioxide	concentration of dissolved carbon dioxide	X	measurement value	{float} {unit}	1	1	micromole per liter
+miscellaneous natural or artificial environment	diss_hydrogen	dissolved hydrogen	concentration of dissolved hydrogen	X	measurement value	{float} {unit}	1	1	micromole per liter
+miscellaneous natural or artificial environment	diss_inorg_carb	dissolved inorganic carbon	dissolved inorganic carbon concentration	X	measurement value	{float} {unit}	1	1	microgram per liter
+miscellaneous natural or artificial environment	diss_org_nitro	dissolved organic nitrogen	dissolved organic nitrogen concentration measured as; total dissolved nitrogen - NH4 - NO3 - NO2	X	measurement value	{float} {unit}	1	1	microgram per liter, milligram per liter
+miscellaneous natural or artificial environment	diss_oxygen	dissolved oxygen	concentration of dissolved oxygen	X	measurement value	{float} {unit}	1	1	micromole per kilogram
+miscellaneous natural or artificial environment	misc_param	miscellaneous parameter	any other measurement performed or parameter collected, that is not listed here	X	parameter name;measurement value	{text};{float} {unit}	m	1	
+miscellaneous natural or artificial environment	nitrate	nitrate	concentration of nitrate	X	measurement value	{float} {unit}	1	1	micromole per liter
+miscellaneous natural or artificial environment	nitrite	nitrite	concentration of nitrite	X	measurement value	{float} {unit}	1	1	micromole per liter
+miscellaneous natural or artificial environment	nitro	nitrogen	concentration of nitrogen (total)	X	measurement value	{float} {unit}	1	1	micromole per liter
+miscellaneous natural or artificial environment	org_carb	organic carbon	concentration of organic carbon	X	measurement value	{float} {unit}	1	1	micromole per liter
+miscellaneous natural or artificial environment	org_matter	organic matter	concentration of organic matter 	X	measurement value	{float} {unit}	1	1	microgram per liter
+miscellaneous natural or artificial environment	org_nitro	organic nitrogen	concentration of organic nitrogen	X	measurement value	{float} {unit}	1	1	microgram per liter
+miscellaneous natural or artificial environment	organism_count	organism count	total count of any organism per gram or volume of sample, should include name of organism followed by count; can include multiple organism counts	X	organism name;measurement value	{text};{float} {unit}	m	1	number of organism per cubic meter
+miscellaneous natural or artificial environment	oxy_stat_samp	oxygenation status of sample	oxygenation status of sample	X	enumeration	[aerobic|anaerobic]	1	1	
+miscellaneous natural or artificial environment	perturbation	perturbation	type of perturbation, e.g. chemical administration, physical disturbance, etc., coupled with time that perturbation occurred; can include multiple perturbation types	X	perturbation type name;time interval	{text};{interval}	m	1	
+miscellaneous natural or artificial environment	ph	pH	pH measurement	X	measurement value	{float}	1	1	
+miscellaneous natural or artificial environment	phosphate	phosphate	concentration of phosphate	X	measurement value	{float} {unit}	1	1	micromole per liter
+miscellaneous natural or artificial environment	phosplipid_fatt_acid	phospholipid fatty acid	concentration of phospholipid fatty acids; can include multiple values	X	phospholipid fatty acid name;measurement value	{text};{float} {unit}	m	1	mole per gram, mole per liter
+miscellaneous natural or artificial environment	potassium	potassium	concentration of potassium 	X	measurement value	{float} {unit}	1	1	parts per million
+miscellaneous natural or artificial environment	pressure	pressure	pressure to which the sample is subject, in atmospheres	X	measurement value	{float} {unit}	1	1	atmosphere
+miscellaneous natural or artificial environment	salinity	salinity	salinity measurement	X	measurement value	{float} {unit}	1	1	practical salinity unit, percentage
+miscellaneous natural or artificial environment	samp_store_dur	sample storage duration	duration for which sample was stored	X	time interval	{interval}	1	1	
+miscellaneous natural or artificial environment	samp_store_loc	sample storage location	location at which sample was stored, usually name of a specific freezer/room	X	location name	{text}	1	1	
+miscellaneous natural or artificial environment	samp_store_temp	sample storage temperature	temperature at which sample was stored, e.g. -80 degree Celsius	X	measurement value	{float} {unit}	1	1	degree Celsius
+miscellaneous natural or artificial environment	samp_vol_we_dna_ext	sample volume or weight for DNA extraction	volume (mL) or weight (g) of sample processed for DNA extraction	X	measurement value	{float} {unit}	1	1	millliter, gram, milligram
+miscellaneous natural or artificial environment	silicate	silicate	concentration of silicate	X	measurement value	{float} {unit}	1	1	micromole per liter
+miscellaneous natural or artificial environment	sodium	sodium	sodium concentration	X	measurement value	{float} {unit}	1	1	parts per million
+miscellaneous natural or artificial environment	sulfate	sulfate	concentration of sulfate	X	measurement value	{float} {unit}	1	1	micromole per liter, milligram per liter
+miscellaneous natural or artificial environment	sulfide	sulfide	concentration of sulfide	X	measurement value	{float} {unit}	1	1	micromole per liter, milligram per liter
+miscellaneous natural or artificial environment	temp	temperature	temperature of the sample at time of sampling	X	measurement value	{float} {unit}	1	1	degree Celsius
+miscellaneous natural or artificial environment	water_current	water current	measurement of magnitude and direction of flow within a fluid	X	measurement value	{float} {unit}	1	1	cubic meter per second, knots
+plant-associated	alt	altitude	the altitude of the sample is the vertical distance between Earth's surface above sea level and the sampled position in the air	C	measurement value	{float} m	1	0	meter
+plant-associated	depth	depth	depth is defined as the vertical distance below local surface, e.g. for sediment or soil samples depth is measured from sediment or soil surface, respectivly. Depth can be reported as an interval for subsurface samples	C	measurement value	{float} m	1	0	
+plant-associated	elev	elevation	the elevation of the sampling site as measured by the vertical distance from mean sea level	C	measurement value	{float} {unit}	1	0	meter
+plant-associated	air_temp_regm	air temperature regimen	information about treatment involving an exposure to varying temperatures; should include the temperature, treatment duration, interval and total experimental duration; can include different temperature regimens	X	temperature value;treatment duration;interval;experimental duration	{float} {unit};{period};{interval};{period}	m	1	degree Celsius
+plant-associated	antibiotic_regm	antibiotic regimen	information about treatment involving antibiotic administration; should include the name of antibiotic, amount administered, treatment duration, interval and total experimental duration; can include multiple antibiotic regimens	X	antibiotic name;antibiotic amount;treatment duration;interval;experimental duration	{text};{float} {unit};{period};{interval};{period}	m	1	milligram
+plant-associated	chem_administration	chemical administration	list of chemical compounds administered to the host or site where sampling occurred, and when (e.g. antibiotics, N fertilizer, air filter); can include multiple compounds. For Chemical Entities of Biological Interest ontology (CHEBI) (v 111), http://purl.bioontology.org/ontology/CHEBI	X	CHEBI;timestamp	{term}; {timestamp}	m	1	
+plant-associated	chem_mutagen	chemical mutagen	treatment involving use of mutagens; should include the name of mutagen, amount administered, treatment duration, interval and total experimental duration; can include multiple mutagen regimens	X	mutagen name;mutagen amount;treatment duration;interval;experimental duration	{text};{float} {unit};{period};{interval};{period}	m	1	milligram per liter
+plant-associated	climate_environment	climate environment	treatment involving an exposure to a particular climate; can include multiple climates	X	climate name;treatment duration;interval;experimental duration	{text};{period};{interval};{period}	m	1	
+plant-associated	fertilizer_regm	fertilizer regimen	information about treatment involving the use of fertilizers; should include the name fertilizer, amount administered, treatment duration, interval and total experimental duration; can include multiple fertilizer regimens	X	fertilizer name;fertilizer amount;treatment duration;interval;experimental duration	{text};{float} {unit};{period};{interval};{period}	m	1	gram, mole per liter, milligram per liter
+plant-associated	fungicide_regm	fungicide regimen	information about treatment involving use of fungicides; should include the name of fungicide, amount administered, treatment duration, interval and total experimental duration; can include multiple fungicide regimens	X	fungicide name;fungicide amount;treatment duration;interval;experimental duration	{text};{float} {unit};{period};{interval};{period}	m	1	gram, mole per liter, milligram per liter
+plant-associated	gaseous_environment	gaseous environment	use of conditions with differing gaseous environments; should include the name of gaseous compound, amount administered, treatment duration, interval and total experimental duration; can include multiple gaseous environment regimens	X	gaseous compound name;gaseous compound amount;treatment duration;interval;experimental duration	{text};{float} {unit};{period};{interval};{period}	m	1	micromole per liter
+plant-associated	gravity	gravity	information about treatment involving use of gravity factor to study various types of responses in presence, absence or modified levels of gravity; can include multiple treatments	X	gravity factor value;treatment duration;interval;experimental duration	{float} {unit};{period};{interval};{period}	m	1	meter per square second, g
+plant-associated	growth_hormone_regm	growth hormone regimen	information about treatment involving use of growth hormones; should include the name of growth hormone, amount administered, treatment duration, interval and total experimental duration; can include multiple growth hormone regimens	X	growth hormone name;growth hormone amount;treatment duration;interval;experimental duration	{text};{float} {unit};{period};{interval};{period}	m	1	gram, mole per liter, milligram per liter
+plant-associated	growth_med	growth media	information about growth media for growing the plants or tissue cultured samples	X	enumeration	[soil|liquid]	1	1	
+plant-associated	herbicide_regm	herbicide regimen	information about treatment involving use of herbicides; information about treatment involving use of growth hormones; should include the name of herbicide, amount administered, treatment duration, interval and total experimental duration; can include multiple regimens	X	herbicide name;herbicide amount;treatment duration;interval;experimental duration	{text};{float} {unit};{period};{interval};{period}	m	1	gram, mole per liter, milligram per liter
+plant-associated	host_age	host age	age of host at the time of sampling; relevant scale depends on species and study, e.g. could be seconds for amoebae or centuries for trees	X	value	{float} {unit}	1	1	year, day, hour
+plant-associated	host_common_name	host common name	common name of the host, e.g. human	X	common name	{text}	1	1	
+plant-associated	host_disease_stat	host disease status	list of diseases with which the host has been diagnosed; can include multiple diagnoses. the value of the field depends on host; for humans the terms should be chosen from DO (Disease Ontology) at http://www.disease-ontology.org, other hosts are free text	X	disease name or DO	{term}	m	1	
+plant-associated	host_dry_mass	host dry mass	measurement of dry mass	X	measurement value	{float} {unit}	1	1	kilogram, gram
+plant-associated	host_genotype	host genotype	observed genotype	X	genotype	{text}	1	1	
+plant-associated	host_height	host height	the height of subject	X	measurement value	{float} {unit}	1	1	centimeter, millimeter, meter
+plant-associated	host_infra_specific_name	host infra-specific name	taxonomic information about the host below subspecies level	X	name	{text}	1	1	
+plant-associated	host_infra_specific_rank	host infra-specific rank	taxonomic rank information about the host below subspecies level, such as variety, form, rank etc.	X	rank	{text}	1	1	
+plant-associated	host_length	host length	the length of subject	X	measurement value	{float} {unit}	1	1	centimeter, millimeter, meter
+plant-associated	host_life_stage	host life stage	description of life stage of host	X	stage	{text}	1	1	
+plant-associated	host_phenotype	host phenotype	phenotype of host. For Phenotypic quality Ontology (PATO) (v 2013-10-28) terms, please see http://purl.bioontology.org/ontology/PATO	X	PATO	{term}	1	1	
+plant-associated	host_taxid	host taxid	NCBI taxon id of the host, e.g. 9606	X	NCBI taxon identifier	{integer}	1	1	
+plant-associated	host_tot_mass	host total mass	total mass of the host at collection, the unit depends on host	X	measurement value	{float} {unit}	1	1	kilogram, gram
+plant-associated	host_wet_mass	host wet mass	measurement of wet mass	X	measurement value	{float} {unit}	1	1	kilogram, gram
+plant-associated	humidity_regm	humidity regimen	information about treatment involving an exposure to varying degree of humidity; information about treatment involving use of growth hormones; should include amount of humidity administered, treatment duration, interval and total experimental duration; can include multiple regimens	X	humidity value;treatment duration;interval;experimental duration	{float} {unit};{period};{interval};{period}	m	1	gram per cubic meter
+plant-associated	mechanical_damage	mechanical damage	information about any mechanical damage exerted on the plant; can include multiple damages and sites	X	damage type;body site	{text};{text}	m	1	
+plant-associated	mineral_nutr_regm	mineral nutrient regimen	information about treatment involving the use of mineral supplements; should include the name of mineral nutrient, amount administered, treatment duration, interval and total experimental duration; can include multiple mineral nutrient regimens	X	mineral nutrient name;mineral nutrient amount;treatment duration;interval;experimental duration	{text};{float} {unit};{period};{interval};{period}	m	1	gram, mole per liter, milligram per liter
+plant-associated	misc_param	miscellaneous parameter	any other measurement performed or parameter collected, that is not listed here	X	parameter name;measurement value	{text};{float} {unit}	m	1	
+plant-associated	non_mineral_nutr_regm	non-mineral nutrient regimen	information about treatment involving the exposure of plant to non-mineral nutrient such as oxygen, hydrogen or carbon; should include the name of non-mineral nutrient, amount administered, treatment duration, interval and total experimental duration; can include multiple non-mineral nutrient regimens	X	non-mineral nutrient name;non-mineral nutrient amount;treatment duration;interval;experimental duration	{text};{float} {unit};{period};{interval};{period}	m	1	gram, mole per liter, milligram per liter
+plant-associated	organism_count	organism count	total count of any organism per gram or volume of sample, should include name of organism followed by count; can include multiple organism counts	X	organism name;measurement value	{text};{float} {unit}	m	1	number of organism per cubic meter
+plant-associated	oxy_stat_samp	oxygenation status of sample	oxygenation status of sample	X	enumeration	[aerobic|anaerobic]	1	1	
+plant-associated	perturbation	perturbation	type of perturbation, e.g. chemical administration, physical disturbance, etc., coupled with time that perturbation occurred; can include multiple perturbation types	X	perturbation type name;time interval	{text};{interval}	m	1	
+plant-associated	pesticide_regm	pesticide regimen	information about treatment involving use of insecticides; should include the name of pesticide, amount administered, treatment duration, interval and total experimental duration; can include multiple pesticide regimens	X	pesticide name;pesticide amount;treatment duration;interval;experimental duration	{text};{float} {unit};{period};{interval};{period}	m	1	gram, mole per liter, milligram per liter
+plant-associated	ph_regm	pH regimen	information about treatment involving exposure of plants to varying levels of pH of the growth media; can include multiple regimen	X	measurement value;treatment duration;interval;experimental duration	{float};{period};{interval};{period}	m	1	
+plant-associated	plant_body_site	plant body site	name of body site that the sample was obtained from. For Plant Ontology (PO) (v 20) terms, see http://purl.bioontology.org/ontology/PO	X	PO	{term}	1	1	
+plant-associated	plant_product	plant product	substance produced by the plant, where the sample was obtained from	X	product name	{text}	1	1	
+plant-associated	radiation_regm	radiation regimen	information about treatment involving exposure of plant or a plant part to a particular radiation regimen; should include the radiation type, amount or intensity administered, treatment duration, interval and total experimental duration; can include multiple radiation regimens	X	radiation type name;radiation amount;treatment duration;interval;experimental duration	{text};{float} {unit};{period};{interval};{period}	m	1	becquerel
+plant-associated	rainfall_regm	rainfall regimen	information about treatment involving an exposure to a given amount of rainfall; can include multiple regimens	X	measurement value;treatment duration;interval;experimental duration	{float} {unit};{period};{interval};{period}	m	1	millimeter
+plant-associated	salt_regm	salt regimen	information about treatment involving use of salts as supplement to liquid and soil growth media; should include the name of salt, amount administered, treatment duration, interval and total experimental duration; can include multiple salt regimens	X	salt name;salt amount;treatment duration;interval;experimental duration	{text};{float} {unit};{period};{interval};{period}	m	1	gram, microgram, mole per liter, gram per liter
+plant-associated	samp_salinity	sample salinity	salinity of sample, i.e. measure of total salt concentration	X	measurement value	{float} {unit}	1	1	practical salinity unit, percentage
+plant-associated	samp_store_dur	sample storage duration	duration for which sample was stored	X	time interval	{interval}	1	1	
+plant-associated	samp_store_loc	sample storage location	location at which sample was stored, usually name of a specific freezer/room	X	location name	{text}	1	1	
+plant-associated	samp_store_temp	sample storage temperature	temperature at which sample was stored, e.g. -80 degree Celsius	X	measurement value	{float} {unit}	1	1	degree Celsius
+plant-associated	samp_vol_we_dna_ext	sample volume or weight for DNA extraction	volume (mL) or weight (g) of sample processed for DNA extraction	X	measurement value	{float} {unit}	1	1	millliter, gram, milligram
+plant-associated	season_environment	seasonal environment	treatment involving an exposure to a particular season (e.g. winter, summer, rabi, rainy etc.)	X	seasonal environment name;treatment duration;interval;experimental duration	{text};{period};{interval};{period}	m	1	
+plant-associated	standing_water_regm	standing water regimen	treatment involving an exposure to standing water during a plant's life span, types can be flood water or standing water; can include multiple regimens	X	standing water type;treatment duration;interval;experimental duration	{text};{period};{interval};{period}	m	1	
+plant-associated	temp	temperature	temperature of the sample at time of sampling	X	measurement value	{float} {unit}	1	1	degree Celsius
+plant-associated	tiss_cult_growth_med	tissue culture growth media	description of plant tissue culture growth media used	X	PMID,DOI,url or free text	{PMID|DOI|URL}	1	1	
+plant-associated	water_temp_regm	water temperature regimen	information about treatment involving an exposure to water with varying degree of temperature; can include multiple regimens	X	measurement value;treatment duration;interval;experimental duration	{float} {unit};{period};{interval};{period}	m	1	degree Celsius
+plant-associated	watering_regm	watering regimen	information about treatment involving an exposure to watering frequencies; can include multiple regimens	X	measurement value;treatment duration;interval;experimental duration	{float} {unit};{period};{interval};{period}	m	1	milliliter, liter
+sediment	alt	altitude	the altitude of the sample is the vertical distance between Earth's surface above sea level and the sampled position in the air	-	measurement value	{float} m	1	0	meter
+sediment	depth	depth	depth is defined as the vertical distance below local surface, e.g. for sediment or soil samples depth is measured from sediment or soil surface, respectivly. Depth can be reported as an interval for subsurface samples	M	measurement value	{float} m	1	0	
+sediment	elev	elevation	the elevation of the sampling site as measured by the vertical distance from mean sea level	M	measurement value	{float} {unit}	1	0	meter
+sediment	alkalinity	alkalinity	alkalinity, the ability of a solution to neutralize acids to the equivalence point of carbonate or bicarbonate	X	measurement value	{float} {unit}	1	1	milliequivalent per liter
+sediment	alkyl_diethers	alkyl diethers	concentration of alkyl diethers 	X	measurement value	{float} {unit}	1	1	mole per liter
+sediment	aminopept_act	aminopeptidase activity	measurement of aminopeptidase activity	X	measurement value	{float} {unit}	1	1	mole per liter per hour
+sediment	ammonium	ammonium	concentration of ammonium	X	measurement value	{float} {unit}	1	1	micromole per liter
+sediment	bacteria_carb_prod	bacterial carbon production	measurement of bacterial carbon production	X	measurement value	{float} {unit}	1	1	nanogram per hour
+sediment	biomass	biomass	amount of biomass; should include the name for the part of biomass measured, e.g. microbial, total. can include multiple measurements	X	biomass type;measurement value	{text};{float} {unit}	m	1	ton, kilogram, gram
+sediment	bishomohopanol	bishomohopanol	concentration of bishomohopanol 	X	measurement value	{float} {unit}	1	1	microgram per liter, microgram per gram
+sediment	bromide	bromide	concentration of bromide 	X	measurement value	{float} {unit}	1	1	parts per million
+sediment	calcium	calcium	concentration of calcium	X	measurement value	{float} {unit}	1	1	milligram per liter, micromole per liter, parts per million
+sediment	carb_nitro_ratio	carbon/nitrogen ratio	ratio of amount or concentrations of carbon to nitrogen	X	measurement value	{float} {unit}	1	1	
+sediment	chem_administration	chemical administration	list of chemical compounds administered to the host or site where sampling occurred, and when (e.g. antibiotics, N fertilizer, air filter); can include multiple compounds. For Chemical Entities of Biological Interest ontology (CHEBI) (v 111), http://purl.bioontology.org/ontology/CHEBI	X	CHEBI;timestamp	{term}; {timestamp}	m	1	
+sediment	chloride	chloride	concentration of chloride 	X	measurement value	{float} {unit}	1	1	milligram per liter
+sediment	chlorophyll	chlorophyll	concentration of chlorophyll	X	measurement value	{float} {unit}	1	1	milligram per cubic meter, microgram per liter
+sediment	density	density	density of sample	X	measurement value	{float} {unit}	1	1	gram per cubic meter
+sediment	diether_lipids	diether lipids	concentration of diether lipids; can include multiple types of diether lipids	X	diether lipid name;measurement value	{text};{float} {unit}	m	1	nanogram per liter
+sediment	diss_carb_dioxide	dissolved carbon dioxide	concentration of dissolved carbon dioxide	X	measurement value	{float} {unit}	1	1	micromole per liter
+sediment	diss_hydrogen	dissolved hydrogen	concentration of dissolved hydrogen	X	measurement value	{float} {unit}	1	1	micromole per liter
+sediment	diss_inorg_carb	dissolved inorganic carbon	dissolved inorganic carbon concentration	X	measurement value	{float} {unit}	1	1	microgram per liter
+sediment	diss_org_carb	dissolved organic carbon	concentration of dissolved organic carbon	X	measurement value	{float} {unit}	1	1	micromole per liter
+sediment	diss_org_nitro	dissolved organic nitrogen	dissolved organic nitrogen concentration measured as; total dissolved nitrogen - NH4 - NO3 - NO2	X	measurement value	{float} {unit}	1	1	microgram per liter, milligram per liter
+sediment	diss_oxygen	dissolved oxygen	concentration of dissolved oxygen	X	measurement value	{float} {unit}	1	1	micromole per kilogram
+sediment	glucosidase_act	glucosidase activity	measurement of glucosidase activity	X	measurement value	{float} {unit}	1	1	mol per liter per hour
+sediment	magnesium	magnesium	concentration of magnesium	X	measurement value	{float} {unit}	1	1	mole per liter, milligram per liter, parts per million
+sediment	mean_frict_vel	mean friction velocity	measurement of mean friction velocity	X	measurement value	{float} {unit}	1	1	meter per second
+sediment	mean_peak_frict_vel	mean peak friction velocity	measurement of mean peak friction velocity	X	measurement value	{float} {unit}	1	1	meter per second
+sediment	methane	methane	methane (gas) amount or concentration at the time of sampling	X	measurement value	{float} {unit}	1	1	micromole per liter
+sediment	misc_param	miscellaneous parameter	any other measurement performed or parameter collected, that is not listed here	X	parameter name;measurement value	{text};{float} {unit}	m	1	
+sediment	n_alkanes	n-alkanes	concentration of n-alkanes; can include multiple n-alkanes	X	n-alkane name;measurement value	{text};{float} {unit}	m	1	micromole per liter
+sediment	nitrate	nitrate	concentration of nitrate	X	measurement value	{float} {unit}	1	1	micromole per liter
+sediment	nitrite	nitrite	concentration of nitrite	X	measurement value	{float} {unit}	1	1	micromole per liter
+sediment	nitro	nitrogen	concentration of nitrogen (total)	X	measurement value	{float} {unit}	1	1	micromole per liter
+sediment	org_carb	organic carbon	concentration of organic carbon	X	measurement value	{float} {unit}	1	1	micromole per liter
+sediment	org_matter	organic matter	concentration of organic matter 	X	measurement value	{float} {unit}	1	1	microgram per liter
+sediment	org_nitro	organic nitrogen	concentration of organic nitrogen	X	measurement value	{float} {unit}	1	1	microgram per liter
+sediment	organism_count	organism count	total count of any organism per gram or volume of sample, should include name of organism followed by count; can include multiple organism counts	X	organism name;measurement value	{text};{float} {unit}	m	1	number of organism per cubic meter
+sediment	oxy_stat_samp	oxygenation status of sample	oxygenation status of sample	X	enumeration	[aerobic|anaerobic]	1	1	
+sediment	part_org_carb	particulate organic carbon	concentration of particulate organic carbon	X	measurement value	{float} {unit}	1	1	microgram per liter
+sediment	particle_class	particle classification	particles are classified, based on their size, into six general categories:clay, silt, sand, gravel, cobbles, and boulders; should include amount of particle preceded by the name of the particle type; can include multiple values	X	particle name;measurement value	{text};{float} {unit}	m	1	micrometer
+sediment	perturbation	perturbation	type of perturbation, e.g. chemical administration, physical disturbance, etc., coupled with time that perturbation occurred; can include multiple perturbation types	X	perturbation type name;time interval	{text};{interval}	m	1	
+sediment	petroleum_hydrocarb	petroleum hydrocarbon	concentration of petroleum hydrocarbon	X	measurement value	{float} {unit}	1	1	micromole per liter
+sediment	ph	pH	pH measurement	X	measurement value	{float}	1	1	
+sediment	phaeopigments	phaeopigments	concentration of phaeopigments; can include multiple phaeopigments	X	phaeopigment name;measurement value	{text};{float} {unit}	m	1	milligram per cubic meter
+sediment	phosphate	phosphate	concentration of phosphate	X	measurement value	{float} {unit}	1	1	micromole per liter
+sediment	phosplipid_fatt_acid	phospholipid fatty acid	concentration of phospholipid fatty acids; can include multiple values	X	phospholipid fatty acid name;measurement value	{text};{float} {unit}	m	1	mole per gram, mole per liter
+sediment	porosity	porosity	porosity of deposited sediment is volume of voids divided by the total volume of sample	X	measurement value	{float} {unit}	1	1	percentage
+sediment	potassium	potassium	concentration of potassium 	X	measurement value	{float} {unit}	1	1	parts per million
+sediment	pressure	pressure	pressure to which the sample is subject, in atmospheres	X	measurement value	{float} {unit}	1	1	atmosphere
+sediment	redox_potential	redox potential	redox potential, measured relative to a hydrogen cell, indicating oxidation or reduction potential	X	measurement value	{float} {unit}	1	1	millivolt
+sediment	salinity	salinity	salinity measurement	X	measurement value	{float} {unit}	1	1	practical salinity unit, percentage
+sediment	samp_store_dur	sample storage duration	duration for which sample was stored	X	time interval	{interval}	1	1	
+sediment	samp_store_loc	sample storage location	location at which sample was stored, usually name of a specific freezer/room	X	location name	{text}	1	1	
+sediment	samp_store_temp	sample storage temperature	temperature at which sample was stored, e.g. -80 degree Celsius	X	measurement value	{float} {unit}	1	1	degree Celsius
+sediment	samp_vol_we_dna_ext	sample volume or weight for DNA extraction	volume (mL) or weight (g) of sample processed for DNA extraction	X	measurement value	{float} {unit}	1	1	millliter, gram, milligram
+sediment	sediment_type	sediment type	information about the sediment type based on major constituents	X	enumeration	[biogenous|cosmogenous|hydrogenous|lithogenous]	1	1	
+sediment	silicate	silicate	concentration of silicate	X	measurement value	{float} {unit}	1	1	micromole per liter
+sediment	sodium	sodium	sodium concentration	X	measurement value	{float} {unit}	1	1	parts per million
+sediment	sulfate	sulfate	concentration of sulfate	X	measurement value	{float} {unit}	1	1	micromole per liter, milligram per liter
+sediment	sulfide	sulfide	concentration of sulfide	X	measurement value	{float} {unit}	1	1	micromole per liter, milligram per liter
+sediment	temp	temperature	temperature of the sample at time of sampling	X	measurement value	{float} {unit}	1	1	degree Celsius
+sediment	tidal_stage	tidal stage	stage of tide	X	enumeration	[low|high]	1	1	
+sediment	tot_carb	total carbon	total carbon content	X	measurement value	{float} {unit}	1	1	microgram per liter
+sediment	tot_nitro	total nitrogen	total nitrogen content of the sample	X	measurement value	{float} {unit}	1	1	microgram per liter, micromole per liter
+sediment	tot_org_carb	total organic carbon	Definition for soil: total organic carbon content of the soil, definition otherwise: total organic carbon content	X	measurement value	{float} {unit}	1	1	gram Carbon per kilogram sample material
+sediment	turbidity	turbidity	turbidity measurement	X	measurement value	{float} {unit}	1	1	formazin turbidity unit, formazin nephelometric units
+sediment	water_content	water content	water content measurement	X	measurement value	{float} {unit}	1	1	gram per gram or cubic centimeter per cubic centimeter
+soil	alt	altitude	the altitude of the sample is the vertical distance between Earth's surface above sea level and the sampled position in the air	C	measurement value	{float} m	1	0	meter
+soil	depth	depth	depth is defined as the vertical distance below local surface, e.g. for sediment or soil samples depth is measured from sediment or soil surface, respectivly. Depth can be reported as an interval for subsurface samples	M	measurement value	{float} m	1	0	
+soil	elev	elevation	the elevation of the sampling site as measured by the vertical distance from mean sea level	M	measurement value	{float} {unit}	1	0	meter
+soil	cur_land_use	current land use	present state of sample site	X	enumeration	[cities|farmstead|industrial areas|roads/railroads|rock|sand|gravel|mudflats|salt flats|badlands|permanent snow or ice|saline seeps|mines/quarries|oil waste areas|small grains|row crops|vegetable crops|horticultural plants (e.g. tulips)|marshlands (grass,sedges,rushes)|tundra (mosses,lichens)|rangeland|pastureland (grasslands used for livestock grazing)|hayland|meadows (grasses,alfalfa,fescue,bromegrass,timothy)|shrub land (e.g. mesquite,sage-brush,creosote bush,shrub oak,eucalyptus)|successional shrub land (tree saplings,hazels,sumacs,chokecherry,shrub dogwoods,blackberries)|shrub crops (blueberries,nursery ornamentals,filberts)|vine crops (grapes)|conifers (e.g. pine,spruce,fir,cypress)|hardwoods (e.g. oak,hickory,elm,aspen)|intermixed hardwood and conifers|tropical (e.g. mangrove,palms)|rainforest (evergreen forest receiving >406 cm annual rainfall)|swamp (permanent or semi-permanent water body dominated by woody plants)|crop trees (nuts,fruit,christmas trees,nursery trees)]	1	1	
+soil	cur_vegetation	current vegetation	vegetation classification from one or more standard classification systems, or agricultural crop	X	current vegetation type	{text}	1	2	
+soil	cur_vegetation_meth	current vegetation method	reference or method used in vegetation classification 	X	PMID,DOI or url	{PMID|DOI|URL}	1	3	
+soil	previous_land_use	history/previous land use	previous land use and dates	X	land use name;date	{text};{timestamp}	1	4	
+soil	previous_land_use_meth	history/previous land use method	reference or method used in determining previous land use and dates	X	PMID,DOI or url	{PMID|DOI|URL}	1	5	
+soil	crop_rotation	history/crop rotation	whether or not crop is rotated, and if yes, rotation schedule	X	crop rotation status;schedule	{boolean};Rn/{timestamp}/{period}	1	6	
+soil	agrochem_addition	history/agrochemical additions	addition of fertilizers, pesticides, etc. - amount and time of applications	X	agrochemical name;agrochemical amount;timestamp	{text};{float} {unit};{timestamp}	m	7	gram, mole per liter, milligram per liter
+soil	tillage	history/tillage	note method(s) used for tilling	X	enumeration	[drill|cutting disc|ridge till|strip tillage|zonal tillage|chisel|tined|mouldboard|disc plough]	m	8	
+soil	fire	history/fire	historical and/or physical evidence of fire	X	date	{timestamp}	1	9	
+soil	flooding	history/flooding	historical and/or physical evidence of flooding	X	date	{timestamp}	1	10	
+soil	extreme_event	history/extreme events	unusual physical events that may have affected microbial populations	X	date	{timestamp}	1	11	
+soil	horizon	horizon	specific layer in the land area which measures parallel to the soil surface and possesses physical characteristics which differ from the layers above and beneath	X	enumeration	[O horizon|A horizon|E horizon|B horizon|C horizon|R layer|Permafrost]	1	13	
+soil	horizon_meth	horizon method	reference or method used in determining the horizon	X	PMID,DOI or url	{PMID|DOI|URL}	1	14	
+soil	sieving	composite design/sieving (if any)	collection design of pooled samples and/or sieve size and amount of sample sieved 	X	design name and/or size;amount	{{text}|{float} {unit}};{float} {unit}	1	15	
+soil	water_content	water content	water content measurement	X	measurement value	{float} {unit}	1	16	gram per gram or cubic centimeter per cubic centimeter
+soil	water_content_soil_meth	water content method	reference or method used in determining the water content of soil	X	PMID,DOI or url	{PMID|DOI|URL}	1	17	
+soil	samp_vol_we_dna_ext	sample volume or weight for DNA extraction	volume (mL) or weight (g) of sample processed for DNA extraction	X	measurement value	{float} {unit}	1	18	millliter, gram, milligram
+soil	pool_dna_extracts	pooling of DNA extracts (if done)	were multiple DNA extractions mixed? how many?	X	pooling status;measurement value	{boolean};{float} {unit}	1	19	gram, milliliter, microliter
+soil	store_cond	storage conditions (fresh/frozen/other)	explain how and for how long the soil sample was stored before DNA extraction.	X	storage condition type;duration	{text};{period}	1	20	
+soil	link_climate_info	link to climate information	link to climate resource	X	PMID,DOI or url	{PMID|DOI|URL}	1	21	
+soil	annual_season_temp	mean annual and seasonal temperature	mean annual and seasonal temperature	X	measurement value	{float} {unit}	1	22	degree Celsius
+soil	annual_season_precpt	mean annual and seasonal precipitation	mean annual and seasonal precipitation	X	measurement value	{float} {unit}	1	23	millimeter
+soil	link_class_info	link to classification information	link to digitized soil maps or other soil classification information	X	PMID,DOI or url	{PMID|DOI|URL}	1	24	
+soil	fao_class	soil_taxonomic/FAO classification	soil classification from the FAO World Reference Database for Soil Resources. The list can be found at http://www.fao.org/nr/land/sols/soil/wrb-soil-maps/reference-groups	X	enumeration	{term}	1	25	
+soil	local_class	soil_taxonomic/local classification	soil classification based on local soil classification system	X	local classification name	{text}	1	26	
+soil	local_class_meth	soil_taxonomic/local classification method	reference or method used in determining the local soil classification 	X	PMID,DOI or url	{PMID|DOI|URL}	1	27	
+soil	soil_type	soil type	soil series name or other lower-level classification	X	soil type name	{text}	1	28	
+soil	soil_type_meth	soil type method	reference or method used in determining soil series name or other lower-level classification	X	PMID,DOI or url	{PMID|DOI|URL}	1	29	
+soil	slope_gradient	slope gradient	commonly called 'slope'. The angle between ground surface and a horizontal line (in percent). This is the direction that overland water would flow. This measure is usually taken with a hand level meter or clinometer	X	measurement value	{float} {unit}	1	30	percentage
+soil	slope_aspect	slope aspect	the direction a slope faces. While looking down a slope use a compass to record the direction you are facing (direction or degrees); e.g., NW or 315 degrees. This measure provides an indication of sun and wind exposure that will influence soil temperature and evapotranspiration.	X	measurement value	{float} {unit}	1	31	degree
+soil	profile_position	profile position	cross-sectional position in the hillslope where sample was collected.sample area position in relation to surrounding areas	X	enumeration	[summit|shoulder|backslope|footslope|toeslope]	1	32	
+soil	drainage_class	drainage classification	drainage classification from a standard system such as the USDA system	X	enumeration	[very poorly|poorly|somewhat poorly|moderately well|well|excessively drained]	1	33	
+soil	texture	texture	the relative proportion of different grain sizes of mineral particles in a soil, as described using a standard system; express as % sand (50 um to 2 mm), silt (2 um to 50 um), and clay (<2 um) with textural name (e.g., silty clay loam) optional.	X	measurement value	{float} {unit}	1	34	
+soil	texture_meth	texture method	reference or method used in determining soil texture	X	PMID,DOI or url	{PMID|DOI|URL}	1	35	
+soil	ph	pH	pH measurement	X	measurement value	{float}	1	36	
+soil	ph_meth	pH method	reference or method used in determining pH	X	PMID,DOI or url	{PMID|DOI|URL}	1	37	
+soil	tot_org_carb	total organic carbon	Definition for soil: total organic carbon content of the soil, definition otherwise: total organic carbon content	X	measurement value	{float} {unit}	1	38	gram Carbon per kilogram sample material
+soil	tot_org_c_meth	total organic carbon method	reference or method used in determining total organic carbon	X	PMID,DOI or url	{PMID|DOI|URL}	1	39	
+soil	tot_nitro	total nitrogen	total nitrogen content of the sample	X	measurement value	{float} {unit}	1	40	microgram per liter, micromole per liter
+soil	tot_n_meth	total nitrogen method	reference or method used in determining the total nitrogen	X	PMID,DOI or url	{PMID|DOI|URL}	1	41	
+soil	microbial_biomass	microbial biomass	the part of the organic matter in the soil that constitutes living microorganisms smaller than 5-10 micrometer. If you keep this, you would need to have correction factors used for conversion to the final units	X	measurement value	{float} {unit}	1	42	ton, kilogram, gram per kilogram soil 
+soil	microbial_biomass_meth	microbial biomass method	reference or method used in determining microbial biomass	X	PMID,DOI or url	{PMID|DOI|URL}	1	43	
+soil	link_addit_analys	links to additional analysis	link to additional analysis results performed on the sample	X	PMID,DOI or url	{PMID|DOI|URL}	1	44	
+soil	extreme_salinity	extreme_unusual_properties/salinity	measured salinity 	X	measurement value	{float} {unit}	1	45	millisiemens per meter
+soil	salinity_meth	extreme_unusual_properties/salinity method	reference or method used in determining salinity	X	PMID,DOI or url	{PMID|DOI|URL}	1	46	
+soil	heavy_metals	extreme_unusual_properties/heavy metals	heavy metals present and concentrationsany drug used by subject and the frequency of usage; can include multiple heavy metals and concentrations	X	heavy metal name;measurement value	{text};{float} {unit}	m	47	microgram per gram
+soil	heavy_metals_meth	extreme_unusual_properties/heavy metals method	reference or method used in determining heavy metals	X	PMID,DOI or url	{PMID|DOI|URL}	1	48	
+soil	al_sat	extreme_unusual_properties/Al saturation	aluminum saturation (esp. for tropical soils)	X	measurement value	{float} {unit}	1	49	percentage
+soil	al_sat_meth	extreme_unusual_properties/Al saturation method	reference or method used in determining Al saturation	X	PMID,DOI or URL	{PMID|DOI|URL}	1	50	
+soil	misc_param	miscellaneous parameter	any other measurement performed or parameter collected, that is not listed here	X	parameter name;measurement value	{text};{float} {unit}	m	51	
+wastewater/sludge	depth	depth	depth is defined as the vertical distance below local surface, e.g. for sediment or soil samples depth is measured from sediment or soil surface, respectivly. Depth can be reported as an interval for subsurface samples	C	measurement value	{float} m	1	0	
+wastewater/sludge	alkalinity	alkalinity	alkalinity, the ability of a solution to neutralize acids to the equivalence point of carbonate or bicarbonate	X	measurement value	{float} {unit}	1	1	milliequivalent per liter
+wastewater/sludge	biochem_oxygen_dem	biochemical oxygen demand	a measure of the relative oxygen-depletion effect of a waste contaminant	X	measurement value	{float} {unit}	1	1	milligram per liter
+wastewater/sludge	chem_administration	chemical administration	list of chemical compounds administered to the host or site where sampling occurred, and when (e.g. antibiotics, N fertilizer, air filter); can include multiple compounds. For Chemical Entities of Biological Interest ontology (CHEBI) (v 111), http://purl.bioontology.org/ontology/CHEBI	X	CHEBI;timestamp	{term}; {timestamp}	m	1	
+wastewater/sludge	chem_oxygen_dem	chemical oxygen demand	a measure of the relative oxygen-depletion effect of a waste contaminant	X	measurement value	{float} {unit}	1	1	milligram per liter
+wastewater/sludge	efficiency_percent	efficiency percent	percentage of volatile solids removed from the anaerobic digestor	X	measurement value	{float} {unit}	1	1	micromole per liter
+wastewater/sludge	emulsions	emulsions	amount or concentration of substances such as paints, adhesives, mayonnaise, hair colorants, emulsified oils, etc.; can include multiple emulsion types	X	emulsion name;measurement value	{text};{float} {unit}	m	1	gram per liter
+wastewater/sludge	gaseous_substances	gaseous substances	amount or concentration of substances such as hydrogen sulfide, carbon dioxide, methane, etc.; can include multiple substances	X	gaseous substance name;measurement value	{text};{float} {unit}	m	1	micromole per liter
+wastewater/sludge	indust_eff_percent	industrial effluent percent	percentage of industrial effluents received by wastewater treatment plant	X	measurement value	{float} {unit}	1	1	percentage
+wastewater/sludge	inorg_particles	inorganic particles	concentration of particles such as sand, grit, metal particles, ceramics, etc.; can include multiple particles	X	inorganic particle name;measurement value	{text};{float} {unit}	m	1	mole per liter, milligram per liter
+wastewater/sludge	misc_param	miscellaneous parameter	any other measurement performed or parameter collected, that is not listed here	X	parameter name;measurement value	{text};{float} {unit}	m	1	
+wastewater/sludge	nitrate	nitrate	concentration of nitrate	X	measurement value	{float} {unit}	1	1	micromole per liter
+wastewater/sludge	org_particles	organic particles	concentration of particles such as faeces, hairs, food, vomit, paper fibers, plant material, humus, etc.	X	particle name;measurement value	{text};{float} {unit}	m	1	gram per liter
+wastewater/sludge	organism_count	organism count	total count of any organism per gram or volume of sample, should include name of organism followed by count; can include multiple organism counts	X	organism name;measurement value	{text};{float} {unit}	m	1	number of organism per cubic meter
+wastewater/sludge	oxy_stat_samp	oxygenation status of sample	oxygenation status of sample	X	enumeration	[aerobic|anaerobic]	1	1	
+wastewater/sludge	perturbation	perturbation	type of perturbation, e.g. chemical administration, physical disturbance, etc., coupled with time that perturbation occurred; can include multiple perturbation types	X	perturbation type name;time interval	{text};{interval}	m	1	
+wastewater/sludge	ph	pH	pH measurement	X	measurement value	{float}	1	1	
+wastewater/sludge	phosphate	phosphate	concentration of phosphate	X	measurement value	{float} {unit}	1	1	micromole per liter
+wastewater/sludge	pre_treatment	pre-treatment	the process of pre-treatment removes materials that can be easily collected from the raw wastewater	X	pre-treatment type	{text}	1	1	
+wastewater/sludge	primary_treatment	primary treatment	the process to produce both a generally homogeneous liquid capable of being treated biologically and a sludge that can be separately treated or processed	X	primary treatment type	{text}	1	1	
+wastewater/sludge	reactor_type	reactor type	anaerobic digesters can be designed and engineered to operate using a number of different process configurations, as batch or continuous, mesophilic, high solid or low solid, and single stage or multistage	X	reactor type name	{text}	1	1	
+wastewater/sludge	samp_salinity	sample salinity	salinity of sample, i.e. measure of total salt concentration	X	measurement value	{float} {unit}	1	1	practical salinity unit, percentage
+wastewater/sludge	samp_store_dur	sample storage duration	duration for which sample was stored	X	time interval	{interval}	1	1	
+wastewater/sludge	samp_store_loc	sample storage location	location at which sample was stored, usually name of a specific freezer/room	X	location name	{text}	1	1	
+wastewater/sludge	samp_store_temp	sample storage temperature	temperature at which sample was stored, e.g. -80 degree Celsius	X	measurement value	{float} {unit}	1	1	degree Celsius
+wastewater/sludge	samp_vol_we_dna_ext	sample volume or weight for DNA extraction	volume (mL) or weight (g) of sample processed for DNA extraction	X	measurement value	{float} {unit}	1	1	millliter, gram, milligram
+wastewater/sludge	secondary_treatment	secondary treatment	the process for substantially degrading the biological content of the sewage 	X	secondary treatment type	{text}	1	1	
+wastewater/sludge	sewage_type	sewage type	type of wastewater treatment plant as municipial or industrial	X	sewage type name	{text}	1	1	
+wastewater/sludge	sludge_retent_time	sludge retention time	the time activated sludge remains in reactor	X	measurement value	{float} {unit}	1	1	hours
+wastewater/sludge	sodium	sodium	sodium concentration	X	measurement value	{float} {unit}	1	1	parts per million
+wastewater/sludge	soluble_inorg_mat	soluble inorganic material	concentration of substances such as ammonia, road-salt, sea-salt, cyanide, hydrogen sulfide, thiocyanates, thiosulfates, etc.	X	soluble inorganic material name;measurement value	{text};{float} {unit}	m	1	gram, microgram, mole per liter, gram per liter, parts per million
+wastewater/sludge	soluble_org_mat	soluble organic material	concentration of substances such as urea, fruit sugars, soluble proteins, drugs, pharmaceuticals, etc.	X	soluble organic material name;measurement value	{text};{float} {unit}	m	1	gram, microgram, mole per liter, gram per liter, parts per million
+wastewater/sludge	suspend_solids	suspended solids	concentration of substances including a wide variety of material, such as silt, decaying plant and animal matter, etc,; can include multiple substances	X	suspended solid name;measurement value	{text};{float} {unit}	m	1	gram, microgram, mole per liter, gram per liter, part per million
+wastewater/sludge	temp	temperature	temperature of the sample at time of sampling	X	measurement value	{float} {unit}	1	1	degree Celsius
+wastewater/sludge	tertiary_treatment	tertiary treatment	the process providing a final treatment stage to raise the effluent quality before it is discharged to the receiving environment	X	tertiary treatment type	{text}	1	1	
+wastewater/sludge	tot_nitro	total nitrogen	total nitrogen concentration of water samples, calculated by: total nitrogen = total dissolved nitrogen + particulate nitrogen. Can also be measured without filtering, reported as nitrogen	X	measurement value	{float} {unit}	1	1	microgram per liter, micromole per liter
+wastewater/sludge	tot_phosphate	total phosphate	total amount or concentration of phosphate	X	measurement value	{float} {unit}	1	1	microgram per liter, micromole per liter
+wastewater/sludge	wastewater_type	wastewater type	the origin of wastewater such as human waste, rainfall, storm drains, etc.	X	wastewater type name	{text}	1	1	
+water	alt	altitude	the altitude of the sample is the vertical distance between Earth's surface above sea level and the sampled position in the air	-	measurement value	{float} m	1	0	meter
+water	depth	depth	depth is defined as the vertical distance below local surface, e.g. for sediment or soil samples depth is measured from sediment or soil surface, respectivly. Depth can be reported as an interval for subsurface samples	M	measurement value	{float} m	1	0	
+water	elev	elevation	the elevation of the sampling site as measured by the vertical distance from mean sea level	C	measurement value	{float} {unit}	1	0	meter
+water	alkalinity	alkalinity	alkalinity, the ability of a solution to neutralize acids to the equivalence point of carbonate or bicarbonate	X	measurement value	{float} {unit}	1	1	milliequivalent per liter
+water	alkyl_diethers	alkyl diethers	concentration of alkyl diethers 	X	measurement value	{float} {unit}	1	1	mole per liter
+water	aminopept_act	aminopeptidase activity	measurement of aminopeptidase activity	X	measurement value	{float} {unit}	1	1	mole per liter per hour
+water	ammonium	ammonium	concentration of ammonium	X	measurement value	{float} {unit}	1	1	micromole per liter
+water	atmospheric_data	atmospheric data	measurement of atmospheric data; can include multiple data	X	atmospheric data name;measurement value	{text};{float} {unit}	m	1	
+water	bac_prod	bacterial production	bacterial production in the water column measured by isotope uptake	X	measurement value	{float} {unit}	1	1	milligram per cubic meter per day
+water	bac_resp	bacterial respiration	measurement of bacterial resporation in the water column	X	measurement value	{float} {unit}	1	1	milligram per cubic meter per day
+water	bacteria_carb_prod	bacterial carbon production	measurement of bacterial carbon production	X	measurement value	{float} {unit}	1	1	nanogram per hour
+water	biomass	biomass	amount of biomass; should include the name for the part of biomass measured, e.g. microbial, total. can include multiple measurements	X	biomass type;measurement value	{text};{float} {unit}	m	1	ton, kilogram, gram
+water	bishomohopanol	bishomohopanol	concentration of bishomohopanol 	X	measurement value	{float} {unit}	1	1	microgram per liter, microgram per gram
+water	bromide	bromide	concentration of bromide 	X	measurement value	{float} {unit}	1	1	parts per million
+water	calcium	calcium	concentration of calcium	X	measurement value	{float} {unit}	1	1	milligram per liter, micromole per liter, parts per million
+water	carb_nitro_ratio	carbon/nitrogen ratio	ratio of amount or concentrations of carbon to nitrogen	X	measurement value	{float} {unit}	1	1	
+water	chem_administration	chemical administration	list of chemical compounds administered to the host or site where sampling occurred, and when (e.g. antibiotics, N fertilizer, air filter); can include multiple compounds. For Chemical Entities of Biological Interest ontology (CHEBI) (v 111), http://purl.bioontology.org/ontology/CHEBI	X	CHEBI;timestamp	{term}; {timestamp}	m	1	
+water	chloride	chloride	concentration of chloride 	X	measurement value	{float} {unit}	1	1	milligram per liter
+water	chlorophyll	chlorophyll	concentration of chlorophyll	X	measurement value	{float} {unit}	1	1	milligram per cubic meter, microgram per liter
+water	conduc	conductivity	electrical conductivity of water	X	measurement value	{float} {unit}	1	1	milliSiemens per centimeter
+water	density	density	density of sample	X	measurement value	{float} {unit}	1	1	gram per cubic meter
+water	diether_lipids	diether lipids	concentration of diether lipids; can include multiple types of diether lipids	X	diether lipid name;measurement value	{text};{float} {unit}	m	1	nanogram per liter
+water	diss_carb_dioxide	dissolved carbon dioxide	concentration of dissolved carbon dioxide	X	measurement value	{float} {unit}	1	1	micromole per liter
+water	diss_hydrogen	dissolved hydrogen	concentration of dissolved hydrogen	X	measurement value	{float} {unit}	1	1	micromole per liter
+water	diss_inorg_carb	dissolved inorganic carbon	dissolved inorganic carbon concentration	X	measurement value	{float} {unit}	1	1	microgram per liter
+water	diss_inorg_nitro	dissolved inorganic nitrogen	concentration of dissolved inorganic nitrogen 	X	measurement value	{float} {unit}	1	1	microgram per liter
+water	diss_inorg_phosp	dissolved inorganic phosphorus	concentration of dissolved inorganic phosphorus 	X	measurement value	{float} {unit}	1	1	microgram per liter
+water	diss_org_carb	dissolved organic carbon	concentration of dissolved organic carbon	X	measurement value	{float} {unit}	1	1	micromole per liter
+water	diss_org_nitro	dissolved organic nitrogen	dissolved organic nitrogen concentration measured as; total dissolved nitrogen - NH4 - NO3 - NO2	X	measurement value	{float} {unit}	1	1	microgram per liter, milligram per liter
+water	diss_oxygen	dissolved oxygen	concentration of dissolved oxygen	X	measurement value	{float} {unit}	1	1	micromole per kilogram
+water	down_par	downward PAR	visible waveband radiance and irradiance measurements in the water column	X	measurement value	{float} {unit}	1	1	microEinstein per meter per second
+water	fluor	fluorescence	raw or converted fluorescence of water	X	measurement value	{float} {unit}	1	1	milligram chlorophyll a per cubic meter
+water	glucosidase_act	glucosidase activity	measurement of glucosidase activity	X	measurement value	{float} {unit}	1	1	mol per liter per hour
+water	light_intensity	light intensity	measurement of light intensity	X	measurement value	{float} {unit}	1	1	lux
+water	magnesium	magnesium	concentration of magnesium	X	measurement value	{float} {unit}	1	1	mole per liter, milligram per liter, parts per million
+water	mean_frict_vel	mean friction velocity	measurement of mean friction velocity	X	measurement value	{float} {unit}	1	1	meter per second
+water	mean_peak_frict_vel	mean peak friction velocity	measurement of mean peak friction velocity	X	measurement value	{float} {unit}	1	1	meter per second
+water	misc_param	miscellaneous parameter	any other measurement performed or parameter collected, that is not listed here	X	parameter name;measurement value	{text};{float} {unit}	m	1	
+water	n_alkanes	n-alkanes	concentration of n-alkanes; can include multiple n-alkanes	X	n-alkane name;measurement value	{text};{float} {unit}	m	1	micromole per liter
+water	nitrate	nitrate	concentration of nitrate	X	measurement value	{float} {unit}	1	1	micromole per liter
+water	nitrite	nitrite	concentration of nitrite	X	measurement value	{float} {unit}	1	1	micromole per liter
+water	nitro	nitrogen	concentration of nitrogen (total)	X	measurement value	{float} {unit}	1	1	micromole per liter
+water	org_carb	organic carbon	concentration of organic carbon	X	measurement value	{float} {unit}	1	1	micromole per liter
+water	org_matter	organic matter	concentration of organic matter 	X	measurement value	{float} {unit}	1	1	microgram per liter
+water	org_nitro	organic nitrogen	concentration of organic nitrogen	X	measurement value	{float} {unit}	1	1	microgram per liter
+water	organism_count	organism count	total count of any organism per gram or volume of sample, should include name of organism followed by count; can include multiple organism counts	X	organism name;measurement value	{text};{float} {unit}	m	1	number of organism per cubic meter
+water	oxy_stat_samp	oxygenation status of sample	oxygenation status of sample	X	enumeration	[aerobic|anaerobic]	1	1	
+water	part_org_carb	particulate organic carbon	concentration of particulate organic carbon	X	measurement value	{float} {unit}	1	1	microgram per liter
+water	part_org_nitro	particulate organic nitrogen	concentration of particulate organic nitrogen	X	measurement value	{float} {unit}	1	1	microgram per liter
+water	perturbation	perturbation	type of perturbation, e.g. chemical administration, physical disturbance, etc., coupled with time that perturbation occurred; can include multiple perturbation types	X	perturbation type name;time interval	{text};{interval}	m	1	
+water	petroleum_hydrocarb	petroleum hydrocarbon	concentration of petroleum hydrocarbon	X	measurement value	{float} {unit}	1	1	micromole per liter
+water	ph	pH	pH measurement	X	measurement value	{float}	1	1	
+water	phaeopigments	phaeopigments	concentration of phaeopigments; can include multiple phaeopigments	X	phaeopigment name;measurement value	{text};{float} {unit}	m	1	milligram per cubic meter
+water	phosphate	phosphate	concentration of phosphate	X	measurement value	{float} {unit}	1	1	micromole per liter
+water	phosplipid_fatt_acid	phospholipid fatty acid	concentration of phospholipid fatty acids; can include multiple values	X	phospholipid fatty acid name;measurement value	{text};{float} {unit}	m	1	mole per gram, mole per liter
+water	photon_flux	photon flux	measurement of photon flux	X	measurement value	{float} {unit}	1	1	micromole per square meter per second
+water	potassium	potassium	concentration of potassium 	X	measurement value	{float} {unit}	1	1	parts per million
+water	pressure	pressure	pressure to which the sample is subject, in atmospheres	X	measurement value	{float} {unit}	1	1	atmosphere
+water	primary_prod	primary production	measurement of primary production 	X	measurement value	{float} {unit}	1	1	milligram per cubic meter per day, gram per square meter per day
+water	redox_potential	redox potential	redox potential, measured relative to a hydrogen cell, indicating oxidation or reduction potential	X	measurement value	{float} {unit}	1	1	millivolt
+water	salinity	salinity	salinity measurement	X	measurement value	{float} {unit}	1	1	practical salinity unit, percentage
+water	samp_store_dur	sample storage duration	duration for which sample was stored	X	time interval	{interval}	1	1	
+water	samp_store_loc	sample storage location	location at which sample was stored, usually name of a specific freezer/room	X	location name	{text}	1	1	
+water	samp_store_temp	sample storage temperature	temperature at which sample was stored, e.g. -80 degree Celsius	X	measurement value	{float} {unit}	1	1	degree Celsius
+water	samp_vol_we_dna_ext	sample volume or weight for DNA extraction	volume (mL) or weight (g) of sample processed for DNA extraction	X	measurement value	{float} {unit}	1	1	millliter, gram, milligram
+water	silicate	silicate	concentration of silicate	X	measurement value	{float} {unit}	1	1	micromole per liter
+water	sodium	sodium	sodium concentration	X	measurement value	{float} {unit}	1	1	parts per million
+water	soluble_react_phosp	soluble reactive phosphorus	concentration of soluble reactive phosphorus	X	measurement value	{float} {unit}	1	1	micromole per liter
+water	sulfate	sulfate	concentration of sulfate	X	measurement value	{float} {unit}	1	1	micromole per liter, milligram per liter
+water	sulfide	sulfide	concentration of sulfide	X	measurement value	{float} {unit}	1	1	micromole per liter, milligram per liter
+water	suspend_part_matter	suspended particulate matter	concentration of suspended particulate matter	X	measurement value	{float} {unit}	1	1	milligram per liter
+water	temp	temperature	temperature of the sample at time of sampling	X	measurement value	{float} {unit}	1	1	degree Celsius
+water	tidal_stage	tidal stage	stage of tide	X	enumeration	[low|high]	1	1	
+water	tot_depth_water_col	total depth of water column	measurement of total depth of water column	X	measurement value	{float} {unit}	1	1	meter
+water	tot_diss_nitro	total dissolved nitrogen	total dissolved nitrogen concentration, reported as nitrogen, measured by: total dissolved nitrogen = NH4 + NO3NO2 + dissolved organic nitrogen	X	measurement value	{float} {unit}	1	1	microgram per liter
+water	tot_inorg_nitro	total inorganic nitrogen	total inorganic nitrogen content	X	measurement value	{float} {unit}	1	1	microgram per liter
+water	tot_nitro	total nitrogen	total nitrogen concentration of water samples, calculated by: total nitrogen = total dissolved nitrogen + particulate nitrogen. Can also be measured without filtering, reported as nitrogen	X	measurement value	{float} {unit}	1	1	microgram per liter, micromole per liter
+water	tot_part_carb	total particulate carbon	total particulate carbon content	X	measurement value	{float} {unit}	1	1	microgram per liter, micromole per liter
+water	tot_phosp	total phosphorus	total phosphorus concentration, calculated by: total phosphorus = total dissolved phosphorus + particulate phosphorus. Can also be measured without filtering, reported as phosphorus	X	measurement value	{float} {unit}	1	1	micromole per liter
+water	water_current	water current	measurement of magnitude and direction of flow within a fluid	X	measurement value	{float} {unit}	1	1	cubic meter per second, knots
